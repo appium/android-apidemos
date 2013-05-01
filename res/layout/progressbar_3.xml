@@ -13,20 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <Button android:id="@+id/showIndeterminate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progressbar_3_indeterminate" android:contentDescription="@string/progressbar_3_indeterminate"/>
 
-    <Button android:id="@+id/showIndeterminate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/progressbar_3_indeterminate" />
-
-    <Button android:id="@+id/showIndeterminateNoTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/progressbar_3_indeterminate_no_title" />
+    <Button android:id="@+id/showIndeterminateNoTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/progressbar_3_indeterminate_no_title" android:contentDescription="@string/progressbar_3_indeterminate_no_title"/>
 
 </LinearLayout>

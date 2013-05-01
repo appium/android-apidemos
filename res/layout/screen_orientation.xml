@@ -13,25 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates implementation of a DeviceAdmin. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/screen_orientation_summary" android:contentDescription="@string/screen_orientation_summary"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/screen_orientation_summary"/>
-
-    <Spinner android:id="@+id/orientation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true"
-        android:prompt="@string/screen_orientation">
+    <Spinner android:id="@+id/orientation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawSelectorOnTop="true" android:prompt="@string/screen_orientation">
     </Spinner>
 </LinearLayout>
-

@@ -13,68 +13,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/parent"
-    >
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Button"
-            android:id="@+id/addNewButton"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Custom Animations"
-            android:id="@+id/customAnimCB"
-            />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Button" android:id="@+id/addNewButton" android:contentDescription="Add Button"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom Animations" android:id="@+id/customAnimCB" android:contentDescription="Custom Animations"/>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="In"
-            android:id="@+id/appearingCB"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Out"
-            android:id="@+id/disappearingCB"
-            />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="In" android:id="@+id/appearingCB" android:contentDescription="In"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Out" android:id="@+id/disappearingCB" android:contentDescription="Out"/>
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Changing-In"
-            android:id="@+id/changingAppearingCB"
-            />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Changing-Out"
-            android:id="@+id/changingDisappearingCB"
-            />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Changing-In" android:id="@+id/changingAppearingCB" android:contentDescription="Changing-In"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Changing-Out" android:id="@+id/changingDisappearingCB" android:contentDescription="Changing-Out"/>
     </LinearLayout>
 </LinearLayout>

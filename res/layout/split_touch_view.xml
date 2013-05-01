@@ -13,30 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Split touch demo. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/split_touch_view_description"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/split_touch_view_description" android:contentDescription="@string/split_touch_view_description"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:splitMotionEvents="true">
-        <ListView android:id="@+id/list1"
-                  android:layout_width="0dip"
-                  android:layout_height="match_parent"
-                  android:layout_weight="1" />
-        <ListView android:id="@+id/list2"
-                  android:layout_width="0dip"
-                  android:layout_height="match_parent"
-                  android:layout_weight="1" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:splitMotionEvents="true">
+        <ListView android:id="@+id/list1" android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
+        <ListView android:id="@+id/list2" android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>

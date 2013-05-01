@@ -13,76 +13,40 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates isolated services.
      See corresponding Java code com.android.sdk.app.IsolatedSerice.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:gravity="center_vertical|center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/isolated_service_controller" android:contentDescription="@string/isolated_service_controller"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:paddingBottom="4dip"
-        android:gravity="center_vertical|center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/isolated_service_controller"/>
-
-    <LinearLayout android:orientation="horizontal" android:paddingTop="16dp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
     
-        <Button android:id="@+id/start1"
-            android:layout_width="wrap_content" android:layout_height="wrap_content" 
-            android:text="@string/start_service_1">
-            <requestFocus />
+        <Button android:id="@+id/start1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_service_1" android:contentDescription="@string/start_service_1">
+            <requestFocus/>
         </Button>
     
-        <Button android:id="@+id/stop1"
-            android:layout_width="wrap_content" android:layout_height="wrap_content" 
-            android:text="@string/stop_service_1">
+        <Button android:id="@+id/stop1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop_service_1" android:contentDescription="@string/stop_service_1">
         </Button>
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <CheckBox android:id="@+id/bind1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bind_service_1" />
-        <TextView android:id="@+id/status1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/bind1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bind_service_1" android:contentDescription="@string/bind_service_1"/>
+        <TextView android:id="@+id/status1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="16dp"/>
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal" android:paddingTop="16dp"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
     
-        <Button android:id="@+id/start2"
-            android:layout_width="wrap_content" android:layout_height="wrap_content" 
-            android:text="@string/start_service_2">
-            <requestFocus />
+        <Button android:id="@+id/start2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_service_2" android:contentDescription="@string/start_service_2">
+            <requestFocus/>
         </Button>
     
-        <Button android:id="@+id/stop2"
-            android:layout_width="wrap_content" android:layout_height="wrap_content" 
-            android:text="@string/stop_service_2">
+        <Button android:id="@+id/stop2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop_service_2" android:contentDescription="@string/stop_service_2">
         </Button>
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <CheckBox android:id="@+id/bind2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bind_service_2" />
-        <TextView android:id="@+id/status2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="16dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <CheckBox android:id="@+id/bind2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bind_service_2" android:contentDescription="@string/bind_service_2"/>
+        <TextView android:id="@+id/status2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="16dp"/>
     </LinearLayout>
 
 </LinearLayout>
-

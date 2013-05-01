@@ -13,23 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates using -wNNNdp and -hNNNdp resource configs. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:gravity="center_horizontal" android:paddingTop="8dp" android:paddingBottom="8dp" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/resources_width_and_height_description" android:contentDescription="@string/resources_width_and_height_description"/>
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:gravity="center_horizontal"
-        android:paddingTop="8dp" android:paddingBottom="8dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/resources_width_and_height_description"/>
-
-    <FrameLayout android:layout_width="match_parent" android:layout_height="0px"
-        android:layout_weight="1"
-        android:background="@android:drawable/gallery_thumb">
-        <include layout="@layout/resources_height" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1" android:background="@android:drawable/gallery_thumb">
+        <include layout="@layout/resources_height"/>
     </FrameLayout>
 
 </LinearLayout>

@@ -13,28 +13,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TableRow>
-        <Button
-            android:text="@string/table_layout_2_open" />
-        <TextView
-            android:text="@string/table_layout_2_path_1"
-            android:padding="3dip" />
+        <Button android:text="@string/table_layout_2_open" android:contentDescription="@string/table_layout_2_open"/>
+        <TextView android:text="@string/table_layout_2_path_1" android:padding="3dip" android:contentDescription="@string/table_layout_2_path_1"/>
     </TableRow>
     <TableRow>
-        <Button
-            android:text="@string/table_layout_2_save_all"/>
+        <Button android:text="@string/table_layout_2_save_all" android:contentDescription="@string/table_layout_2_save_all"/>
     </TableRow>
     <TableRow>
-        <Button
-            android:text="@string/table_layout_2_save"
-            android:visibility="invisible" />
-        <TextView
-            android:text="@string/table_layout_2_path_2"
-            android:padding="3dip" />
+        <Button android:text="@string/table_layout_2_save" android:visibility="invisible" android:contentDescription="@string/table_layout_2_save"/>
+        <TextView android:text="@string/table_layout_2_path_2" android:padding="3dip" android:contentDescription="@string/table_layout_2_path_2"/>
     </TableRow>
 </TableLayout>

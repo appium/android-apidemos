@@ -13,80 +13,40 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Stretch some columns -->
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:stretchColumns="1">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:stretchColumns="1">
 
     <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/table_layout_6_open"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_open_shortcut"
-            android:gravity="right"
-            android:padding="3dip" />
+        <TextView android:layout_column="1" android:text="@string/table_layout_6_open" android:padding="3dip" android:contentDescription="@string/table_layout_6_open"/>
+        <TextView android:text="@string/table_layout_6_open_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_6_open_shortcut"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/table_layout_6_save"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_save_shortcut"
-            android:gravity="right"
-            android:padding="3dip" />
+        <TextView android:layout_column="1" android:text="@string/table_layout_6_save" android:padding="3dip" android:contentDescription="@string/table_layout_6_save"/>
+        <TextView android:text="@string/table_layout_6_save_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_6_save_shortcut"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/table_layout_6_save_as"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_save_as_shortcut"
-            android:gravity="right"
-            android:padding="3dip" />
+        <TextView android:layout_column="1" android:text="@string/table_layout_6_save_as" android:padding="3dip" android:contentDescription="@string/table_layout_6_save_as"/>
+        <TextView android:text="@string/table_layout_6_save_as_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_6_save_as_shortcut"/>
     </TableRow>
 
-    <View
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+    <View android:layout_height="2dip" android:background="#FF909090"/>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_6_x"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_import"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_6_x" android:padding="3dip" android:contentDescription="@string/table_layout_6_x"/>
+        <TextView android:text="@string/table_layout_6_import" android:padding="3dip" android:contentDescription="@string/table_layout_6_import"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_6_x"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_export"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_6_export_shortcut"
-            android:gravity="right"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_6_x" android:padding="3dip" android:contentDescription="@string/table_layout_6_x"/>
+        <TextView android:text="@string/table_layout_6_export" android:padding="3dip" android:contentDescription="@string/table_layout_6_export"/>
+        <TextView android:text="@string/table_layout_6_export_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_6_export_shortcut"/>
     </TableRow>
 
-    <View
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+    <View android:layout_height="2dip" android:background="#FF909090"/>
 
     <TableRow>
-        <TextView
-            android:layout_column="1"
-            android:text="@string/table_layout_6_quit"
-            android:padding="3dip" />
+        <TextView android:layout_column="1" android:text="@string/table_layout_6_quit" android:padding="3dip" android:contentDescription="@string/table_layout_6_quit"/>
     </TableRow>
 </TableLayout>

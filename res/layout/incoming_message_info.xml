@@ -13,26 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+		<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sample_thumb_2"/>
 
-		<ImageView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:src="@drawable/sample_thumb_2"
-            />
-
-        <TextView
-            android:id="@+id/message"
-            android:layout_gravity="center_vertical"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-            android:paddingLeft="6dip"
-            android:text="@string/incoming_message_info_message_text"
-            />
+        <TextView android:id="@+id/message" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingLeft="6dip" android:text="@string/incoming_message_info_message_text" android:contentDescription="@string/incoming_message_info_message_text"/>
 
 </LinearLayout>
-

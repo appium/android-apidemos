@@ -13,55 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView 
-        android:id="@+id/username_view"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:text="@string/alert_dialog_username"
-        android:gravity="left"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView android:id="@+id/username_view" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:text="@string/alert_dialog_username" android:gravity="left" android:textAppearance="?android:attr/textAppearanceMedium" android:contentDescription="@string/alert_dialog_username"/>
             
-    <EditText
-        android:id="@+id/username_edit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:scrollHorizontally="true"
-        android:autoText="false"
-        android:capitalize="none"
-        android:gravity="fill_horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText android:id="@+id/username_edit" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:scrollHorizontally="true" android:autoText="false" android:capitalize="none" android:gravity="fill_horizontal" android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-    <TextView
-        android:id="@+id/password_view"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:text="@string/alert_dialog_password"
-        android:gravity="left"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView android:id="@+id/password_view" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:text="@string/alert_dialog_password" android:gravity="left" android:textAppearance="?android:attr/textAppearanceMedium" android:contentDescription="@string/alert_dialog_password"/>
             
-    <EditText
-        android:id="@+id/password_edit"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:scrollHorizontally="true"
-        android:autoText="false"
-        android:capitalize="none"
-        android:gravity="fill_horizontal"
-        android:password="true"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <EditText android:id="@+id/password_edit" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginLeft="20dip" android:layout_marginRight="20dip" android:scrollHorizontally="true" android:autoText="false" android:capitalize="none" android:gravity="fill_horizontal" android:password="true" android:textAppearance="?android:attr/textAppearanceMedium"/>
         
 </LinearLayout>

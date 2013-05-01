@@ -13,29 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
+    <Button android:id="@+id/leftButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:text="@string/focus_2_left" android:nextFocusRight="@+id/rightButton" android:contentDescription="@string/focus_2_left"/>  <!-- jump over middle! -->
 
-    <Button android:id="@+id/leftButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:text="@string/focus_2_left"
-        android:nextFocusRight="@+id/rightButton"/>  <!-- jump over middle! -->
+    <Button android:id="@+id/centerButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:text="@string/focus_2_jump" android:contentDescription="@string/focus_2_jump"/>
 
-    <Button android:id="@+id/centerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:text="@string/focus_2_jump" />
-
-    <Button android:id="@+id/rightButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:text="@string/focus_2_right"/>
+    <Button android:id="@+id/rightButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:text="@string/focus_2_right" android:contentDescription="@string/focus_2_right"/>
     
 </LinearLayout>

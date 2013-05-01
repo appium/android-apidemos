@@ -13,12 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates an activity with a custom dialog theme.
      See corresponding Java code com.android.sdk.app.CustomDialogActivity.java. -->
-
 <!-- This screen consists of a single text field that displays some text. -->
-<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/text"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:gravity="center_vertical|center_horizontal"
-    android:text="@string/custom_dialog_activity_text"/>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/text" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical|center_horizontal" android:text="@string/custom_dialog_activity_text" android:contentDescription="@string/custom_dialog_activity_text"/>

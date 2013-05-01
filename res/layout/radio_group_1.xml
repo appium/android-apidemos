@@ -13,37 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:checkedButton="@+id/lunch"
-        android:id="@+id/menu">
-        <RadioButton
-            android:text="@string/radio_group_1_breakfast"
-            android:id="@+id/breakfast"
-            />
-        <RadioButton
-            android:text="@string/radio_group_1_lunch"
-            android:id="@id/lunch" />
-        <RadioButton
-            android:text="@string/radio_group_1_dinner"
-            android:id="@+id/dinner" />
-        <RadioButton
-            android:text="@string/radio_group_1_all"
-            android:id="@+id/all" />
-        <TextView
-            android:text="@string/radio_group_1_selection"
-            android:id="@+id/choice" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:checkedButton="@+id/lunch" android:id="@+id/menu">
+        <RadioButton android:text="@string/radio_group_1_breakfast" android:id="@+id/breakfast" android:contentDescription="@string/radio_group_1_breakfast"/>
+        <RadioButton android:text="@string/radio_group_1_lunch" android:id="@id/lunch" android:contentDescription="@string/radio_group_1_lunch"/>
+        <RadioButton android:text="@string/radio_group_1_dinner" android:id="@+id/dinner" android:contentDescription="@string/radio_group_1_dinner"/>
+        <RadioButton android:text="@string/radio_group_1_all" android:id="@+id/all" android:contentDescription="@string/radio_group_1_all"/>
+        <TextView android:text="@string/radio_group_1_selection" android:id="@+id/choice" android:contentDescription="@string/radio_group_1_selection"/>
     </RadioGroup>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/radio_group_1_clear"
-        android:id="@+id/clear" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/radio_group_1_clear" android:id="@+id/clear" android:contentDescription="@string/radio_group_1_clear"/>
 </LinearLayout>

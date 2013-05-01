@@ -13,39 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    >
-    <view class="com.example.android.apis.view.ContentBrowserActivity$Content"
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:animateLayoutChanges="true"
-        >
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:textColor="#ff000000"
-            android:background="#c0ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="A title goes here"
-            />
-        <SeekBar
-            android:id="@+id/seekbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="16dp"
-            />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <view class="com.example.android.apis.view.ContentBrowserActivity$Content" android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:fitsSystemWindows="true" android:animateLayoutChanges="true">
+        <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="top|center_horizontal" android:textColor="#ff000000" android:background="#c0ffffff" android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center" android:padding="16dp" android:text="A title goes here" android:contentDescription="A title goes here"/>
+        <SeekBar android:id="@+id/seekbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom|center_horizontal" android:layout_marginBottom="16dp"/>
     </FrameLayout>
 </FrameLayout>

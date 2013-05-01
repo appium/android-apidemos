@@ -13,51 +13,30 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates starting and stopping a local service.
      See corresponding Java code com.android.sdk.app.LocalSerice.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/activity_animation_msg" android:contentDescription="@string/activity_animation_msg"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/activity_animation_msg"/>
-
-    <Button android:id="@+id/fade_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_animation_fade">
-        <requestFocus />
+    <Button android:id="@+id/fade_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_animation_fade" android:contentDescription="@string/activity_animation_fade">
+        <requestFocus/>
     </Button>
 
-    <Button android:id="@+id/zoom_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_animation_zoom">
+    <Button android:id="@+id/zoom_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_animation_zoom" android:contentDescription="@string/activity_animation_zoom">
     </Button>
 
-    <Button android:id="@+id/modern_fade_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_modern_animation_fade">
-        <requestFocus />
+    <Button android:id="@+id/modern_fade_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_modern_animation_fade" android:contentDescription="@string/activity_modern_animation_fade">
+        <requestFocus/>
     </Button>
 
-    <Button android:id="@+id/modern_zoom_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_modern_animation_zoom">
+    <Button android:id="@+id/modern_zoom_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_modern_animation_zoom" android:contentDescription="@string/activity_modern_animation_zoom">
     </Button>
 
-    <Button android:id="@+id/scale_up_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_scale_up_animation">
+    <Button android:id="@+id/scale_up_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_scale_up_animation" android:contentDescription="@string/activity_scale_up_animation">
     </Button>
 
-    <Button android:id="@+id/zoom_thumbnail_animation"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/activity_zoom_thumbnail_animation">
+    <Button android:id="@+id/zoom_thumbnail_animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_zoom_thumbnail_animation" android:contentDescription="@string/activity_zoom_thumbnail_animation">
     </Button>
 
 </LinearLayout>
-

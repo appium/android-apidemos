@@ -13,28 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <LinearLayout android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView android:id="@+id/dateDisplay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/date_widgets_example_dateDisplay_text"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@+id/dateDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_widgets_example_dateDisplay_text" android:contentDescription="@string/date_widgets_example_dateDisplay_text"/>
     </LinearLayout>
 
-    <Button android:id="@+id/pickDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date_widgets_example_pickDate_text"/>
+    <Button android:id="@+id/pickDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_widgets_example_pickDate_text" android:contentDescription="@string/date_widgets_example_pickDate_text"/>
 
-    <Button android:id="@+id/pickTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/date_widgets_example_pickTime_text"/>
+    <Button android:id="@+id/pickTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_widgets_example_pickTime_text" android:contentDescription="@string/date_widgets_example_pickTime_text"/>
 
 </LinearLayout>

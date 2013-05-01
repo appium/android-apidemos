@@ -13,37 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_4_instructions" android:contentDescription="@string/autocomplete_4_instructions"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/autocomplete_4_instructions" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_4_name" android:contentDescription="@string/autocomplete_4_name"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/autocomplete_4_name" />
-
-        <AutoCompleteTextView android:id="@+id/edit"
-            android:completionThreshold="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <AutoCompleteTextView android:id="@+id/edit" android:completionThreshold="1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/autocomplete_4_message" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_4_message" android:contentDescription="@string/autocomplete_4_message"/>
 
 </LinearLayout>

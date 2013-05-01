@@ -13,34 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates a simple linear layout. The height of the layout is the sum of its children. -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@drawable/blue"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/blue" android:layout_width="match_parent" android:layout_height="wrap_content">
 
     <!-- view1 goes on top -->
-    <TextView
-        android:background="@drawable/box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/linear_layout_1_top"/>
+    <TextView android:background="@drawable/box" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/linear_layout_1_top" android:contentDescription="@string/linear_layout_1_top"/>
 
     <!-- view2 goes in the middle -->
-    <TextView
-        android:background="@drawable/box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/linear_layout_1_middle"/>
+    <TextView android:background="@drawable/box" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/linear_layout_1_middle" android:contentDescription="@string/linear_layout_1_middle"/>
 
     <!-- view3 goes on the bottom -->
-    <TextView
-        android:background="@drawable/box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/linear_layout_1_bottom"/>
+    <TextView android:background="@drawable/box" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/linear_layout_1_bottom" android:contentDescription="@string/linear_layout_1_bottom"/>
 
 </LinearLayout>

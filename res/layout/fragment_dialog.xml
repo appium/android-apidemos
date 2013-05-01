@@ -13,28 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Top-level content view for the simple fragment sample. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:layout_gravity="center_vertical|center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:gravity="top|center_horizontal"/>
 
-    <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:gravity="top|center_horizontal" />
-
-    <Button android:id="@+id/show"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="@string/show">
-        <requestFocus />
+    <Button android:id="@+id/show" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0" android:text="@string/show" android:contentDescription="@string/show">
+        <requestFocus/>
     </Button>
 
 </LinearLayout>

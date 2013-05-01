@@ -13,32 +13,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dip"
-        android:text="@string/accessibility_custom_view_instructions">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50dip" android:text="@string/accessibility_custom_view_instructions" android:contentDescription="@string/accessibility_custom_view_instructions">
     </TextView>
 
-    <view
-        class="com.example.android.apis.accessibility.CustomViewAccessibilityActivity$AccessibleCompoundButtonInheritance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dip"
-        android:clickable="true" >
+    <view class="com.example.android.apis.accessibility.CustomViewAccessibilityActivity$AccessibleCompoundButtonInheritance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="20dip" android:clickable="true">
     </view>
 
-    <view
-        class="com.example.android.apis.accessibility.CustomViewAccessibilityActivity$AccessibleCompoundButtonComposition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dip"
-        android:clickable="true" >
+    <view class="com.example.android.apis.accessibility.CustomViewAccessibilityActivity$AccessibleCompoundButtonComposition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="20dip" android:clickable="true">
     </view>
 
 </LinearLayout>

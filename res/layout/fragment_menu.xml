@@ -13,34 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="8dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/fragment_menu_msg" android:contentDescription="@string/fragment_menu_msg"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/fragment_menu_msg" />
-
-    <CheckBox android:id="@+id/menu1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:checked="true"
-        android:text="@string/fragment1menu">
+    <CheckBox android:id="@+id/menu1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:checked="true" android:text="@string/fragment1menu" android:contentDescription="@string/fragment1menu">
     </CheckBox>
     
-    <CheckBox android:id="@+id/menu2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:checked="true"
-        android:text="@string/fragment2menu">
+    <CheckBox android:id="@+id/menu2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:checked="true" android:text="@string/fragment2menu" android:contentDescription="@string/fragment2menu">
     </CheckBox>
     
 </LinearLayout>

@@ -13,34 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Lots of buttons = need scrolling -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
     
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
         
         <!-- Regular sized buttons -->
-        <Button android:id="@+id/button_normal"
-            android:text="@string/buttons_1_normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button android:id="@+id/button_normal" android:text="@string/buttons_1_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/buttons_1_normal"/>
 
         <!-- Small buttons -->
-        <Button android:id="@+id/button_small"
-            style="?android:attr/buttonStyleSmall"
-            android:text="@string/buttons_1_small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button android:id="@+id/button_small" style="?android:attr/buttonStyleSmall" android:text="@string/buttons_1_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/buttons_1_small"/>
 
-        <ToggleButton android:id="@+id/button_toggle"
-            android:text="@string/buttons_1_toggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <ToggleButton android:id="@+id/button_toggle" android:text="@string/buttons_1_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/buttons_1_toggle"/>
             
     </LinearLayout>
     

@@ -13,19 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates receiving activity results.
      See corresponding Java code com.android.sdk.app.ReceiveResult.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/forward_target"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/forward_target" android:contentDescription="@string/forward_target"/>
 
 </LinearLayout>
-

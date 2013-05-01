@@ -13,32 +13,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_5_instructions" android:contentDescription="@string/autocomplete_5_instructions"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/autocomplete_5_instructions" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_5_name" android:contentDescription="@string/autocomplete_5_name"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/autocomplete_5_name" />
-
-        <AutoCompleteTextView android:id="@+id/edit"
-            android:completionThreshold="1"
-            android:completionHint="@string/autocomplete_5_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <AutoCompleteTextView android:id="@+id/edit" android:completionThreshold="1" android:completionHint="@string/autocomplete_5_hint" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

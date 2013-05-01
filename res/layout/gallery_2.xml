@@ -13,26 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:layout_marginBottom="10dip" android:text="@string/gallery_2_text" android:contentDescription="@string/gallery_2_text"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginBottom="10dip"
-        android:text="@string/gallery_2_text"
-    />
-
-    <Gallery android:id="@+id/gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:spacing="16dp"
-    />
+    <Gallery android:id="@+id/gallery" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:spacing="16dp"/>
 
 </LinearLayout>
-

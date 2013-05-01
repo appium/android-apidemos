@@ -13,32 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates using a relative layout to create a form -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/blue"
-    android:padding="10dip">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/blue" android:padding="10dip">
 
     <!--
         TextView goes at the top left by default .
     -->
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/relative_layout_2_instructions"/>
+    <TextView android:id="@+id/label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/relative_layout_2_instructions" android:contentDescription="@string/relative_layout_2_instructions"/>
 
     <!--
         Put the EditText field under the TextView
     -->
-    <EditText
-        android:id="@+id/entry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/label"/>
+    <EditText android:id="@+id/entry" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/label"/>
 
     <!--
         The OK button goes below the EditText field.
@@ -47,14 +33,7 @@
         The OK button comes first so the Cancel button
         can be specified relative to the OK button.
     -->
-    <Button
-        android:id="@+id/ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/entry"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="10dip"
-        android:text="@string/relative_layout_2_ok" />
+    <Button android:id="@+id/ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/entry" android:layout_alignParentRight="true" android:layout_marginLeft="10dip" android:text="@string/relative_layout_2_ok" android:contentDescription="@string/relative_layout_2_ok"/>
 
     <!--
         The Cancel button is aligned with the top of
@@ -62,12 +41,6 @@
         Since the OK button has a left margin of 10, there
         is some space between the two buttons.
     -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/ok"
-        android:layout_alignTop="@id/ok"
-        android:text="@string/relative_layout_2_cancel" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ok" android:layout_alignTop="@id/ok" android:text="@string/relative_layout_2_cancel" android:contentDescription="@string/relative_layout_2_cancel"/>
 
 </RelativeLayout>
-

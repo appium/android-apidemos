@@ -13,40 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates styled string resources.
      See corresponding Java code com.android.sdk.content.StyledText -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:text="@string/styled_text_rsrc" android:contentDescription="@string/styled_text_rsrc"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/styled_text_rsrc"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:textStyle="normal" android:text="@string/styled_text" android:contentDescription="@string/styled_text"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textStyle="normal"
-        android:text="@string/styled_text"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:text="@string/styled_text_prog" android:contentDescription="@string/styled_text_prog"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="@string/styled_text_prog"/>
-
-    <TextView android:id="@+id/text"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textStyle="normal"/>
+    <TextView android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:textStyle="normal"/>
 
 </LinearLayout>
-
-

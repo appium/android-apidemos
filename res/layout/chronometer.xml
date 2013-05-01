@@ -13,52 +13,24 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <Chronometer android:id="@+id/chronometer" android:format="@string/chronometer_initial_format" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="30dip" android:paddingTop="30dip"/>
 
-    <Chronometer android:id="@+id/chronometer"
-        android:format="@string/chronometer_initial_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:paddingBottom="30dip"
-        android:paddingTop="30dip"
-        />
-
-    <Button android:id="@+id/start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="@string/chronometer_start">
-        <requestFocus />
+    <Button android:id="@+id/start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chronometer_start" android:contentDescription="@string/chronometer_start">
+        <requestFocus/>
     </Button>
 
-    <Button android:id="@+id/stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="@string/chronometer_stop">
+    <Button android:id="@+id/stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chronometer_stop" android:contentDescription="@string/chronometer_stop">
     </Button>
 
-    <Button android:id="@+id/reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="@string/chronometer_reset">
+    <Button android:id="@+id/reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chronometer_reset" android:contentDescription="@string/chronometer_reset">
     </Button>
 
-    <Button android:id="@+id/set_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="@string/chronometer_set_format">
+    <Button android:id="@+id/set_format" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chronometer_set_format" android:contentDescription="@string/chronometer_set_format">
     </Button>
 
-    <Button android:id="@+id/clear_format"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" 
-        android:text="@string/chronometer_clear_format">
+    <Button android:id="@+id/clear_format" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chronometer_clear_format" android:contentDescription="@string/chronometer_clear_format">
     </Button>
 
 </LinearLayout>
-
-

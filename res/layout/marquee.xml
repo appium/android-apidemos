@@ -14,33 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent" 
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
     
-    <Button
-        android:layout_width="150dip" 
-        android:layout_height="wrap_content"
-        android:text="@string/marquee_default"
-        android:singleLine="true"
-        android:ellipsize="marquee"/>
+    <Button android:layout_width="150dip" android:layout_height="wrap_content" android:text="@string/marquee_default" android:singleLine="true" android:ellipsize="marquee" android:contentDescription="@string/marquee_default"/>
         
-    <Button
-        android:layout_width="150dip" 
-        android:layout_height="wrap_content"
-        android:text="@string/marquee_once"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="1"/>
+    <Button android:layout_width="150dip" android:layout_height="wrap_content" android:text="@string/marquee_once" android:singleLine="true" android:ellipsize="marquee" android:marqueeRepeatLimit="1" android:contentDescription="@string/marquee_once"/>
         
-    <Button
-        android:layout_width="150dip" 
-        android:layout_height="wrap_content"
-        android:text="@string/marquee_forever"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"/>  
+    <Button android:layout_width="150dip" android:layout_height="wrap_content" android:text="@string/marquee_forever" android:singleLine="true" android:ellipsize="marquee" android:marqueeRepeatLimit="marquee_forever" android:contentDescription="@string/marquee_forever"/>  
            
 </LinearLayout>

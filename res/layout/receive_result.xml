@@ -13,38 +13,19 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!--
     Demonstrates receiving activity results.
     See corresponding Java code com.android.sdk.app.ReceiveResult.java.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/receive_result_instructions" android:contentDescription="@string/receive_result_instructions"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/receive_result_instructions"/>
-
-    <TextView android:id="@+id/results"
-        android:layout_width="match_parent" android:layout_height="10dip"
-        android:layout_weight="1"
-        android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000"
-        android:background="@drawable/green">
+    <TextView android:id="@+id/results" android:layout_width="match_parent" android:layout_height="10dip" android:layout_weight="1" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="#000" android:background="@drawable/green">
     </TextView>
 
-    <Button android:id="@+id/get"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:layout_weight="0"
-        android:text="@string/receive_result_result">
-        <requestFocus />
+    <Button android:id="@+id/get" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0" android:text="@string/receive_result_result" android:contentDescription="@string/receive_result_result">
+        <requestFocus/>
     </Button>
 
 </LinearLayout>
-

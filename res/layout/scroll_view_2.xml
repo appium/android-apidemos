@@ -13,29 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates scrolling with a ScrollView. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="none">
+    <LinearLayout android:id="@+id/layout" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/layout"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scroll_view_2_text_1" android:contentDescription="@string/scroll_view_2_text_1"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scroll_view_2_text_1"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scroll_view_2_button_1"/>
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scroll_view_2_button_1" android:contentDescription="@string/scroll_view_2_button_1"/>
 
     </LinearLayout>
 </ScrollView>

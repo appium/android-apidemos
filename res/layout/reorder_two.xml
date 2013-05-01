@@ -13,26 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates using Intent.FLAG_ACTIVITY_REORDER_TO_FRONT.
      See corresponding Java code com.example.android.apis.app.ReorderOnLaunch.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/reorder_two_text" android:contentDescription="@string/reorder_two_text"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/reorder_two_text"/>
-
-    <Button android:id="@+id/reorder_launch_three"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="@string/reorder_launch_three">
+    <Button android:id="@+id/reorder_launch_three" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reorder_launch_three" android:contentDescription="@string/reorder_launch_three">
     </Button>
 
 </LinearLayout>

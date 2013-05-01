@@ -13,80 +13,40 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TableLayout
-            android:id="@+id/menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TableLayout android:id="@+id/menu" android:layout_width="match_parent" android:layout_height="wrap_content">
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_open"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="@string/table_layout_9_open_shortcut"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_open" android:padding="3dip" android:contentDescription="@string/table_layout_9_open"/>
+                <TextView android:text="@string/table_layout_9_open_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_9_open_shortcut"/>
             </TableRow>
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_save"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="@string/table_layout_9_save_shortcut"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_save" android:padding="3dip" android:contentDescription="@string/table_layout_9_save"/>
+                <TextView android:text="@string/table_layout_9_save_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_9_save_shortcut"/>
             </TableRow>
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_save_as"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="@string/table_layout_9_save_as_shortcut"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_save_as" android:padding="3dip" android:contentDescription="@string/table_layout_9_save_as"/>
+                <TextView android:text="@string/table_layout_9_save_as_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_9_save_as_shortcut"/>
             </TableRow>
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_save_all"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="@string/table_layout_9_save_all_shortcut"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_save_all" android:padding="3dip" android:contentDescription="@string/table_layout_9_save_all"/>
+                <TextView android:text="@string/table_layout_9_save_all_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_9_save_all_shortcut"/>
             </TableRow>
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_import"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_import" android:padding="3dip" android:contentDescription="@string/table_layout_9_import"/>
             </TableRow>
 
             <TableRow>
-                <TextView
-                    android:text="@string/table_layout_9_export"
-                    android:padding="3dip" />
-                <TextView
-                    android:text="@string/table_layout_9_export_shortcut"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                <TextView android:text="@string/table_layout_9_export" android:padding="3dip" android:contentDescription="@string/table_layout_9_export"/>
+                <TextView android:text="@string/table_layout_9_export_shortcut" android:gravity="right" android:padding="3dip" android:contentDescription="@string/table_layout_9_export_shortcut"/>
             </TableRow>
         </TableLayout>
 
-        <Button
-            android:id="@+id/toggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/table_layout_9_toggle_shrink" />
+        <Button android:id="@+id/toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/table_layout_9_toggle_shrink" android:contentDescription="@string/table_layout_9_toggle_shrink"/>
     </LinearLayout>
 </ScrollView>

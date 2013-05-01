@@ -13,34 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!--
     Demonstrates using GridLayout to build the "Simple Form" from the
     LinearLayout and RelativeLayout demos.
 -->
-
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/blue"
-    android:columnCount="4"
-    android:padding="10dip"
-    >
-    <TextView
-        android:text="@string/grid_layout_1_instructions"
-    />
-    <EditText
-        android:layout_column="0"
-        android:layout_columnSpan="4"
-        android:layout_gravity="fill_horizontal"
-    />
-    <Button
-        android:layout_column="2"
-        android:text="@string/grid_layout_1_cancel"
-    />
-    <Button
-        android:layout_marginLeft="10dip"
-        android:text="@string/grid_layout_1_ok"
-    />
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/blue" android:columnCount="4" android:padding="10dip">
+    <TextView android:text="@string/grid_layout_1_instructions" android:contentDescription="@string/grid_layout_1_instructions"/>
+    <EditText android:layout_column="0" android:layout_columnSpan="4" android:layout_gravity="fill_horizontal"/>
+    <Button android:layout_column="2" android:text="@string/grid_layout_1_cancel" android:contentDescription="@string/grid_layout_1_cancel"/>
+    <Button android:layout_marginLeft="10dip" android:text="@string/grid_layout_1_ok" android:contentDescription="@string/grid_layout_1_ok"/>
 </GridLayout>

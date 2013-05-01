@@ -13,29 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates starting and stopping a local service.
      See corresponding Java code com.android.sdk.app.LocalSerice.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/alarm_service" android:contentDescription="@string/alarm_service"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/alarm_service"/>
-
-    <Button android:id="@+id/start_alarm"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:text="@string/start_alarm_service">
-        <requestFocus />
+    <Button android:id="@+id/start_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/start_alarm_service" android:contentDescription="@string/start_alarm_service">
+        <requestFocus/>
     </Button>
 
-    <Button android:id="@+id/stop_alarm"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:text="@string/stop_alarm_service" />
+    <Button android:id="@+id/stop_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop_alarm_service" android:contentDescription="@string/stop_alarm_service"/>
 
 </LinearLayout>
-

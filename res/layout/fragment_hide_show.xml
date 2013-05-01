@@ -13,44 +13,24 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Top-level content view for the layout fragment sample. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical|center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text="Demonstration of hiding and showing fragments." android:contentDescription="Demonstration of hiding and showing fragments."/>
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Demonstration of hiding and showing fragments." />
+    <LinearLayout android:orientation="horizontal" android:padding="4dip" android:gravity="center_vertical" android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout android:orientation="horizontal" android:padding="4dip"
-        android:gravity="center_vertical" android:layout_weight="1"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/frag1hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hide" android:contentDescription="Hide"/>
 
-        <Button android:id="@+id/frag1hide"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Hide" />
-
-        <fragment android:name="com.example.android.apis.app.FragmentHideShow$FirstFragment"
-                android:id="@+id/fragment1" android:layout_weight="1"
-                android:layout_width="0px" android:layout_height="wrap_content" />
+        <fragment android:name="com.example.android.apis.app.FragmentHideShow$FirstFragment" android:id="@+id/fragment1" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
-    <LinearLayout android:orientation="horizontal" android:padding="4dip"
-        android:gravity="center_vertical" android:layout_weight="1"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:padding="4dip" android:gravity="center_vertical" android:layout_weight="1" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <Button android:id="@+id/frag2hide"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Hide" />
+        <Button android:id="@+id/frag2hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hide" android:contentDescription="Hide"/>
 
-        <fragment android:name="com.example.android.apis.app.FragmentHideShow$SecondFragment"
-                android:id="@+id/fragment2" android:layout_weight="1"
-                android:layout_width="0px" android:layout_height="wrap_content" />
+        <fragment android:name="com.example.android.apis.app.FragmentHideShow$SecondFragment" android:id="@+id/fragment2" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

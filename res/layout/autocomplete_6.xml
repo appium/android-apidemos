@@ -13,36 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:orientation="vertical"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_7_instructions" android:contentDescription="@string/autocomplete_7_instructions"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/autocomplete_7_instructions" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_7_country" android:contentDescription="@string/autocomplete_7_country"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/autocomplete_7_country" />
-
-        <MultiAutoCompleteTextView android:id="@+id/edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <MultiAutoCompleteTextView android:id="@+id/edit" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/autocomplete_7_focus" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/autocomplete_7_focus" android:contentDescription="@string/autocomplete_7_focus"/>
 
 </LinearLayout>

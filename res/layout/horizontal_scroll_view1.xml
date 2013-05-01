@@ -13,14 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates horizontal scrolling with a ScrollView. -->
-<HorizontalScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dip"
-    android:layout_height="120dip">
-    <TextView
-        android:layout_width="300dip"
-        android:layout_height="wrap_content"
-        android:text="@string/scrollbar_3_text" />
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="100dip" android:layout_height="120dip">
+    <TextView android:layout_width="300dip" android:layout_height="wrap_content" android:text="@string/scrollbar_3_text" android:contentDescription="@string/scrollbar_3_text"/>
 </HorizontalScrollView>

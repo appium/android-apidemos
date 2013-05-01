@@ -13,109 +13,50 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates using a LinearLayout background to group related
      TextViews, EditTexts, and Buttons. -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
     <!-- Top label/button text field. -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:addStatesFromChildren="true"
-        android:gravity="center_vertical"
-        android:paddingRight="0dip"
-        android:background="@android:drawable/edit_text">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:addStatesFromChildren="true" android:gravity="center_vertical" android:paddingRight="0dip" android:background="@android:drawable/edit_text">
 
         <!--
             TextView label goes at the left.
         -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/linear_layout_10_from"
-            android:textColor="?android:attr/textColorSecondary"
-            android:textAppearance="?android:attr/textAppearanceLargeInverse"
-        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/linear_layout_10_from" android:textColor="?android:attr/textColorSecondary" android:textAppearance="?android:attr/textAppearanceLargeInverse" android:contentDescription="@string/linear_layout_10_from"/>
 
         <!--
             EditText goes in between.
         -->
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:singleLine="true"
-            android:background="@null"
-        />
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:singleLine="true" android:background="@null"/>
 
         <!--
             The button goes at the right.
         -->
-        <ImageButton
-            style="@android:style/Widget.Button.Inset"
-            android:src="@android:drawable/star_big_on"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dip"
-            android:layout_marginRight="2dip"
-            android:layout_marginBottom="2dip"
-            android:padding="10dip"
-        />
+        <ImageButton style="@android:style/Widget.Button.Inset" android:src="@android:drawable/star_big_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dip" android:layout_marginRight="2dip" android:layout_marginBottom="2dip" android:padding="10dip"/>
 
     </LinearLayout>
 
     <!-- Bottom label/button text field.  (Identical to the top one
          except for the label.)  -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:addStatesFromChildren="true"
-        android:gravity="center_vertical"
-        android:paddingRight="0dip"
-        android:background="@android:drawable/edit_text">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:addStatesFromChildren="true" android:gravity="center_vertical" android:paddingRight="0dip" android:background="@android:drawable/edit_text">
 
         <!--
             TextView label goes at the left.
         -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/linear_layout_10_to"
-            android:textColor="?android:attr/textColorSecondary"
-            android:textAppearance="?android:attr/textAppearanceLargeInverse"
-        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/linear_layout_10_to" android:textColor="?android:attr/textColorSecondary" android:textAppearance="?android:attr/textAppearanceLargeInverse" android:contentDescription="@string/linear_layout_10_to"/>
 
         <!--
             EditText goes in between.
         -->
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:singleLine="true"
-            android:background="@null"
-        />
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:singleLine="true" android:background="@null"/>
 
         <!--
             The button goes at the right.
         -->
-        <ImageButton
-            style="@android:style/Widget.Button.Inset"
-            android:src="@android:drawable/star_big_on"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dip"
-            android:layout_marginRight="2dip"
-            android:layout_marginBottom="2dip"
-            android:padding="10dip"
-        />
+        <ImageButton style="@android:style/Widget.Button.Inset" android:src="@android:drawable/star_big_on" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dip" android:layout_marginRight="2dip" android:layout_marginBottom="2dip" android:padding="10dip"/>
 
     </LinearLayout>
 

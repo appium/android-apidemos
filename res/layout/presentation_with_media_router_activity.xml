@@ -13,34 +13,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- See corresponding Java code PresentationWithMediaRouterActivity.java. -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
 
     <!-- Message to show to use. -->
-    <TextView android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center_vertical|center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/presentation_with_media_router_activity_text"/>
+    <TextView android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:gravity="center_vertical|center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/presentation_with_media_router_activity_text" android:contentDescription="@string/presentation_with_media_router_activity_text"/>
 
     <!-- Some information about what's going on. -->
-    <TextView android:id="@+id/info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center_vertical|center_horizontal"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <TextView android:id="@+id/info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:gravity="center_vertical|center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium"/>
 
     <!-- Some content for visual interest in the case where no presentation is showing. -->
-    <android.opengl.GLSurfaceView android:id="@+id/surface_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    <android.opengl.GLSurfaceView android:id="@+id/surface_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
 </LinearLayout>

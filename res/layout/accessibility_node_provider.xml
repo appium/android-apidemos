@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2011 The Android Open Source Project
+<!--
+     Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,19 +17,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dip"
-        android:text="@string/accessibility_node_provider_instructions">
+        android:contentDescription="@string/accessibility_node_provider_instructions"
+        android:text="@string/accessibility_node_provider_instructions" >
     </TextView>
 
     <view
-        class="com.example.android.apis.accessibility.AccessibilityNodeProviderActivity$VirtualSubtreeRootView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        class="com.example.android.apis.accessibility.AccessibilityNodeProviderActivity$VirtualSubtreeRootView" >
     </view>
 
 </LinearLayout>

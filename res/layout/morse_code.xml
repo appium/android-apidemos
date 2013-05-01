@@ -13,25 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- This activity exercises search invocation options -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
     
-    <EditText
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="4dip"
-        />
+    <EditText android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="4dip"/>
     
-    <Button
-        android:id="@+id/button"
-        android:text="@string/vibrate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <Button android:id="@+id/button" android:text="@string/vibrate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/vibrate"/>
 
 </LinearLayout>

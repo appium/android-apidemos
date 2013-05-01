@@ -13,24 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/accessibility_service_instructions"
-        />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accessibility_service_instructions" android:contentDescription="@string/accessibility_service_instructions"/>
 
-    <ImageButton android:id="@+id/button"
-        android:background="@drawable/ic_launcher_settings"
-        android:layout_width="32dip"
-        android:layout_height="32dip"
-        android:layout_marginTop="50dip"
-        android:layout_gravity="center"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true" />
+    <ImageButton android:id="@+id/button" android:background="@drawable/ic_launcher_settings" android:layout_width="32dip" android:layout_height="32dip" android:layout_marginTop="50dip" android:layout_gravity="center" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
 
 </LinearLayout>

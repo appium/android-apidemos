@@ -13,50 +13,26 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:shrinkColumns="2, 3">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:shrinkColumns="2, 3">
 
     <!-- Rows have different number of columns and content doesn't fit on
          screen: column 4 of row 2 shrinks all of the other columns -->
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_3_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_open"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_open_shortcut"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_3_star" android:padding="3dip" android:contentDescription="@string/table_layout_3_star"/>
+        <TextView android:text="@string/table_layout_3_open" android:padding="3dip" android:contentDescription="@string/table_layout_3_open"/>
+        <TextView android:text="@string/table_layout_3_open_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_3_open_shortcut"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_3_triple_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_save"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_save_shortcut"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_too_long"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_3_triple_star" android:padding="3dip" android:contentDescription="@string/table_layout_3_triple_star"/>
+        <TextView android:text="@string/table_layout_3_save" android:padding="3dip" android:contentDescription="@string/table_layout_3_save"/>
+        <TextView android:text="@string/table_layout_3_save_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_3_save_shortcut"/>
+        <TextView android:text="@string/table_layout_3_too_long" android:padding="3dip" android:contentDescription="@string/table_layout_3_too_long"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_3_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_quit"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_3_quit_shortcut"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_3_star" android:padding="3dip" android:contentDescription="@string/table_layout_3_star"/>
+        <TextView android:text="@string/table_layout_3_quit" android:padding="3dip" android:contentDescription="@string/table_layout_3_quit"/>
+        <TextView android:text="@string/table_layout_3_quit_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_3_quit_shortcut"/>
     </TableRow>
 </TableLayout>

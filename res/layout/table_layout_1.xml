@@ -13,44 +13,23 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TableRow>
-        <TextView
-          android:text="@string/table_layout_1_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_open"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_open_shortcut"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_1_star" android:padding="3dip" android:contentDescription="@string/table_layout_1_star"/>
+        <TextView android:text="@string/table_layout_1_open" android:padding="3dip" android:contentDescription="@string/table_layout_1_open"/>
+        <TextView android:text="@string/table_layout_1_open_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_1_open_shortcut"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_1_triple_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_save"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_save_shortcut"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_1_triple_star" android:padding="3dip" android:contentDescription="@string/table_layout_1_triple_star"/>
+        <TextView android:text="@string/table_layout_1_save" android:padding="3dip" android:contentDescription="@string/table_layout_1_save"/>
+        <TextView android:text="@string/table_layout_1_save_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_1_save_shortcut"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_1_star"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_quit"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_1_quit_shortcut"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_1_star" android:padding="3dip" android:contentDescription="@string/table_layout_1_star"/>
+        <TextView android:text="@string/table_layout_1_quit" android:padding="3dip" android:contentDescription="@string/table_layout_1_quit"/>
+        <TextView android:text="@string/table_layout_1_quit_shortcut" android:padding="3dip" android:contentDescription="@string/table_layout_1_quit_shortcut"/>
     </TableRow>
 </TableLayout>

@@ -13,30 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/appwidget_configure_instructions" android:contentDescription="@string/appwidget_configure_instructions"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/appwidget_configure_instructions"
-    />
+    <EditText android:id="@+id/appwidget_prefix" android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/appwidget_prefix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    />
-
-    <Button
-        android:id="@+id/save_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@android:string/ok"
-    />
+    <Button android:id="@+id/save_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/ok" android:contentDescription="@android:string/ok"/>
 
 </LinearLayout>

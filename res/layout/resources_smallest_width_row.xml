@@ -13,21 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Part of resources_width_and_height that varies based on width. -->
-
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-            android:orientation="horizontal">
-        <TextView android:layout_width="0px" android:layout_height="match_parent"
-                android:layout_weight="1" android:gravity="center_horizontal"
-                android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
-                android:background="#800000ff" android:text="Default Width\n#1">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+        <TextView android:layout_width="0px" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center_horizontal" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:background="#800000ff" android:text="Default Width\n#1" android:contentDescription="Default Width\n#1">
         </TextView>
-        <TextView android:layout_width="0px" android:layout_height="match_parent"
-                android:layout_weight="1" android:gravity="center_horizontal"
-                android:layout_marginLeft="4dp" android:layout_marginRight="4dp"
-                android:background="#800000ff" android:text="Default Width\n#2">
+        <TextView android:layout_width="0px" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center_horizontal" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:background="#800000ff" android:text="Default Width\n#2" android:contentDescription="Default Width\n#2">
         </TextView>
     </LinearLayout>
 </merge>

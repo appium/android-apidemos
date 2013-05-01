@@ -13,34 +13,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Top-level content view for the simple fragment sample. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <FrameLayout
-            android:id="@+id/simple_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1">
+    <FrameLayout android:id="@+id/simple_fragment" android:layout_width="match_parent" android:layout_height="0px" android:layout_weight="1">
     </FrameLayout>
 
-    <LinearLayout android:orientation="horizontal" android:padding="4dip"
-        android:gravity="center_horizontal" android:measureWithLargestChild="true"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:layout_weight="0">
-        <Button android:id="@+id/new_fragment"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="@string/new_fragment">
-            <requestFocus />
+    <LinearLayout android:orientation="horizontal" android:padding="4dip" android:gravity="center_horizontal" android:measureWithLargestChild="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0">
+        <Button android:id="@+id/new_fragment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_fragment" android:contentDescription="@string/new_fragment">
+            <requestFocus/>
         </Button>
-        <Button android:id="@+id/delete_fragment"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_weight="0" 
-            android:text="@string/delete_fragment">
+        <Button android:id="@+id/delete_fragment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0" android:text="@string/delete_fragment" android:contentDescription="@string/delete_fragment">
         </Button>
     </LinearLayout>
 </LinearLayout>

@@ -13,157 +13,45 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates scrolling with a ScrollView. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/scrollbar_1_text" android:contentDescription="@string/scrollbar_1_text"/>
     </LinearLayout>
 </ScrollView>

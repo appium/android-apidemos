@@ -13,48 +13,26 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent" 
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
     
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent" 
-        android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
         
-        <Button android:id="@+id/add"
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:text="@string/list_8_new_photo"/>
+        <Button android:id="@+id/add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/list_8_new_photo" android:contentDescription="@string/list_8_new_photo"/>
             
-        <Button android:id="@+id/clear"
-            android:layout_width="wrap_content" 
-            android:layout_height="wrap_content"
-            android:text="@string/list_8_clear_photos"/>
+        <Button android:id="@+id/clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/list_8_clear_photos" android:contentDescription="@string/list_8_clear_photos"/>
             
     </LinearLayout>
     
     <!-- The frame layout is here since we will be showing either
     the empty view or the list view.  -->
-    <FrameLayout
-        android:layout_width="match_parent" 
-        android:layout_height="0dip"
-        android:layout_weight="1" >
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dip" android:layout_weight="1">
         <!-- Here is the list. Since we are using a ListActivity, we
              have to call it "@android:id/list" so ListActivity will
              find it -->
-        <ListView android:id="@android:id/list"
-            android:layout_width="match_parent" 
-            android:layout_height="match_parent"
-            android:drawSelectorOnTop="false"/>
+        <ListView android:id="@android:id/list" android:layout_width="match_parent" android:layout_height="match_parent" android:drawSelectorOnTop="false"/>
         
         <!-- Here is the view to show if the list is emtpy -->
-        <TextView android:id="@+id/empty"
-            android:layout_width="match_parent" 
-            android:layout_height="match_parent"
-            android:text="@string/list_8_no_photos"/>
+        <TextView android:id="@+id/empty" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/list_8_no_photos" android:contentDescription="@string/list_8_no_photos"/>
             
     </FrameLayout>
         

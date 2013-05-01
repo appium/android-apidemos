@@ -13,5 +13,4 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<Button xmlns:android="http://schemas.android.com/apk/res/android"
-        android:text="@string/display_options_custom_button" />
+<Button xmlns:android="http://schemas.android.com/apk/res/android" android:text="@string/display_options_custom_button" android:contentDescription="@string/display_options_custom_button"/>

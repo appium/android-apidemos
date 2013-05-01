@@ -13,48 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates styled string resources.
      See corresponding Java code com.android.sdk.content.StyledText -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    <Button android:id="@+id/login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/googlelogin_login" android:contentDescription="@string/googlelogin_login"/>
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/googlelogin_login"
-        />
+    <Button android:id="@+id/bad_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/googlelogin_bad_login" android:contentDescription="@string/googlelogin_bad_login"/>
 
-    <Button
-        android:id="@+id/bad_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/googlelogin_bad_login"
-        />
+    <Button android:id="@+id/clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/googlelogin_clear" android:contentDescription="@string/googlelogin_clear"/>
 
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/googlelogin_clear"
-        />
+    <TextView android:id="@+id/username_label" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/googlelogin_user" android:contentDescription="@string/googlelogin_user"/>
 
-    <TextView
-        android:id="@+id/username_label"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/googlelogin_user"/>
-
-    <TextView
-        android:id="@+id/username"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/google_login_username_text"/>
+    <TextView android:id="@+id/username" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/google_login_username_text" android:contentDescription="@string/google_login_username_text"/>
 
 </LinearLayout>

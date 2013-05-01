@@ -13,54 +13,27 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates sending and receiving SMS messages.
      See corresponding Java code SmsMessagingDemo.java
 -->
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="6dip">
-        <TextView
-            android:textColor="#ff0000"
-            android:textStyle="bold"
-            android:text="@string/sms_warning"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <CheckBox
-            android:id="@+id/sms_enable_receiver"
-            android:text="@string/sms_enable_receiver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TableLayout
-            android:padding="6dip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stretchColumns="1">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="6dip">
+        <TextView android:textColor="#ff0000" android:textStyle="bold" android:text="@string/sms_warning" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="@string/sms_warning"/>
+        <CheckBox android:id="@+id/sms_enable_receiver" android:text="@string/sms_enable_receiver" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/sms_enable_receiver"/>
+        <TableLayout android:padding="6dip" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="1">
             <TableRow android:layout_width="match_parent">
-                <TextView android:text="@string/sms_recipient_label" />
-                <EditText android:id="@+id/sms_recipient" />
+                <TextView android:text="@string/sms_recipient_label" android:contentDescription="@string/sms_recipient_label"/>
+                <EditText android:id="@+id/sms_recipient"/>
             </TableRow>
             <TableRow>
-                <TextView android:text="@string/sms_content_label" />
-                <EditText android:id="@+id/sms_content" />
+                <TextView android:text="@string/sms_content_label" android:contentDescription="@string/sms_content_label"/>
+                <EditText android:id="@+id/sms_content"/>
             </TableRow>
             <TableRow>
-                <Button
-                    android:id="@+id/sms_send_message"
-                    android:text="@string/sms_send_message"
-                    android:layout_column="1" />
+                <Button android:id="@+id/sms_send_message" android:text="@string/sms_send_message" android:layout_column="1" android:contentDescription="@string/sms_send_message"/>
             </TableRow>
             <TableRow>
-                <TextView
-                    android:id="@+id/sms_status"
-                    android:layout_column="1" />
+                <TextView android:id="@+id/sms_status" android:layout_column="1"/>
             </TableRow>
         </TableLayout>
     </LinearLayout>

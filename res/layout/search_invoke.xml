@@ -13,82 +13,33 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- This activity exercises search invocation options -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
     
     <!--  Section: Information -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="4dip"
-        android:text="@string/msg_search" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="4dip" android:text="@string/msg_search" android:contentDescription="@string/msg_search"/>
     
      <!--  Section: Invocation -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_sect_invocation" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_sect_invocation" android:contentDescription="@string/search_sect_invocation"/>
 
-    <Button android:id="@+id/btn_start_search"
-        android:text="@string/label_onsearchrequested"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_start_search" android:text="@string/label_onsearchrequested" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/label_onsearchrequested"/>
             
-    <Spinner android:id="@+id/spinner_menu_mode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawSelectorOnTop="true" />
+    <Spinner android:id="@+id/spinner_menu_mode" android:layout_width="match_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="true"/>
             
     <!--  Section: Options -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search_sect_options" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_sect_options" android:contentDescription="@string/search_sect_options"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_search_query_prefill" />
-            <EditText android:id="@+id/txt_query_prefill"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxEms="10"
-                android:minEms="10" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_search_query_prefill" android:contentDescription="@string/label_search_query_prefill"/>
+            <EditText android:id="@+id/txt_query_prefill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="10" android:minEms="10"/>
         </LinearLayout>
     </LinearLayout>
     
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_search_query_appdata" />
-            <EditText android:id="@+id/txt_query_appdata"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxEms="10"
-                android:minEms="10" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_search_query_appdata" android:contentDescription="@string/label_search_query_appdata"/>
+            <EditText android:id="@+id/txt_query_appdata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="10" android:minEms="10"/>
         </LinearLayout>
     </LinearLayout>
      

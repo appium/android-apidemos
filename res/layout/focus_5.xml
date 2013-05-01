@@ -13,48 +13,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates using nextFocusForward to explicitly set sequential focus order.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content" android:layout_width="wrap_content" android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:orientation="vertical">
+        <Button android:id="@+id/button1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/focus_5_button1" android:nextFocusForward="@+id/button2" android:contentDescription="@string/focus_5_button1"/>
 
-        <Button android:id="@+id/button1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/focus_5_button1"
-            android:nextFocusForward="@+id/button2"/>
+        <Button android:id="@+id/button2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/focus_5_button2" android:nextFocusForward="@+id/button3" android:contentDescription="@string/focus_5_button2"/>
 
-        <Button android:id="@+id/button2"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/focus_5_button2"
-            android:nextFocusForward="@+id/button3"/>
-
-        <Button android:id="@+id/button3"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/focus_5_button3"
-            android:nextFocusForward="@+id/button4"/>
+        <Button android:id="@+id/button3" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/focus_5_button3" android:nextFocusForward="@+id/button4" android:contentDescription="@string/focus_5_button3"/>
 
     </LinearLayout>
 
-    <Button android:id="@+id/button4"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/focus_5_button4"
-        android:nextFocusForward="@+id/button5"/>
+    <Button android:id="@+id/button4" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/focus_5_button4" android:nextFocusForward="@+id/button5" android:contentDescription="@string/focus_5_button4"/>
 
-    <Button android:id="@+id/button5"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/focus_5_button5"
-        android:nextFocusForward="@+id/button1"/>
+    <Button android:id="@+id/button5" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/focus_5_button5" android:nextFocusForward="@+id/button1" android:contentDescription="@string/focus_5_button5"/>
 </LinearLayout>

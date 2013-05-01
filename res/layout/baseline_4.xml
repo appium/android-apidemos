@@ -13,43 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:text="@string/baseline_4_label" android:contentDescription="@string/baseline_4_label"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:text="@string/baseline_4_label" />
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:layout_gravity="center_vertical" android:text="@string/baseline_4_button" android:contentDescription="@string/baseline_4_button"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:layout_gravity="center_vertical"
-        android:text="@string/baseline_4_button" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom" android:textSize="20sp" android:text="@string/baseline_4_bigger" android:contentDescription="@string/baseline_4_bigger"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:textSize="20sp"
-        android:text="@string/baseline_4_bigger" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:text="@string/baseline_4_label_2" android:contentDescription="@string/baseline_4_label_2"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:text="@string/baseline_4_label_2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="3dip"
-        android:layout_gravity="bottom"
-        android:text="@string/baseline_4_label_3" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:layout_gravity="bottom" android:text="@string/baseline_4_label_3" android:contentDescription="@string/baseline_4_label_3"/>
 
 </LinearLayout>

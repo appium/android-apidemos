@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <Button android:id="@+id/localvideo"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" 
-        android:text="@string/local_video" 
-    />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:id="@+id/localvideo" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/local_video" android:contentDescription="@string/local_video"/>
     
-    <Button android:id="@+id/streamvideo"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" 
-        android:text="@string/stream_video" 
-    />
+    <Button android:id="@+id/streamvideo" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/stream_video" android:contentDescription="@string/stream_video"/>
     
-    <Button android:id="@+id/localaudio"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" 
-        android:text="@string/local_audio" 
-    />
+    <Button android:id="@+id/localaudio" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/local_audio" android:contentDescription="@string/local_audio"/>
     
-    <Button android:id="@+id/resourcesaudio"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" 
-        android:text="@string/res_audio" 
-    />
+    <Button android:id="@+id/resourcesaudio" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="@string/res_audio" android:contentDescription="@string/res_audio"/>
     
 </LinearLayout>

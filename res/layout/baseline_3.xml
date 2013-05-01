@@ -13,43 +13,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/baseline_3_explanation" android:contentDescription="@string/baseline_3_explanation"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/baseline_3_explanation" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_weight="1.0" android:layout_height="0dip">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_weight="1.0"
-        android:layout_height="0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:layout_gravity="center_vertical" android:text="@string/baseline_3_label" android:contentDescription="@string/baseline_3_label"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="3dip"
-            android:layout_gravity="center_vertical"
-            android:text="@string/baseline_3_label" />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3dip" android:layout_gravity="center_vertical" android:text="@string/baseline_3_button" android:contentDescription="@string/baseline_3_button"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="3dip"
-            android:layout_gravity="center_vertical"
-            android:text="@string/baseline_3_button" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textSize="20sp"
-            android:text="@string/baseline_3_bigger" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:textSize="20sp" android:text="@string/baseline_3_bigger" android:contentDescription="@string/baseline_3_bigger"/>
 
     </LinearLayout>
 

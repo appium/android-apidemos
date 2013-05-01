@@ -13,32 +13,20 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!--
     Demonstrates a nesting layouts to make a form
 -->
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@drawable/blue"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dip">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/blue" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dip">
 
     <!--
         TextView goes on top...
     -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/linear_layout_5_instructions"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/linear_layout_5_instructions" android:contentDescription="@string/linear_layout_5_instructions"/>
 
     <!--
         Followed by the EditText field...
     -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"/>
 
     <!--
         Use a horizontal layout to hold the two buttons.
@@ -48,22 +36,11 @@
         wrap_content. (If it was match_parent it would not have any
         room to slide to the right.)
     -->
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right" >
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/linear_layout_5_cancel"/>
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/linear_layout_5_cancel" android:contentDescription="@string/linear_layout_5_cancel"/>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:text="@string/linear_layout_5_ok" />
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dip" android:text="@string/linear_layout_5_ok" android:contentDescription="@string/linear_layout_5_ok"/>
 
     </LinearLayout>
 

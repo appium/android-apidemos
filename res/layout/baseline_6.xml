@@ -13,22 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <EditText android:id="@+id/anchor" android:layout_width="match_parent" android:layout_height="match_parent" android:textSize="20sp" android:text="@string/baseline_6_multi_line" android:contentDescription="@string/baseline_6_multi_line"/>
 
-    <EditText android:id="@+id/anchor"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:text="@string/baseline_6_multi_line" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/anchor"
-        android:layout_alignRight="@id/anchor"
-        android:text="@string/baseline_6_baseline" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/anchor" android:layout_alignRight="@id/anchor" android:text="@string/baseline_6_baseline" android:contentDescription="@string/baseline_6_baseline"/>
 
 </RelativeLayout>

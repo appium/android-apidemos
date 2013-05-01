@@ -13,100 +13,33 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates secure views. -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="10dip"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/secure_view_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secure_view_description"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:padding="10dip" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:id="@+id/secure_view_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/secure_view_description" android:contentDescription="@string/secure_view_description"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:textStyle="bold"
-            android:text="@string/secure_view_step1_heading"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" android:textStyle="bold" android:text="@string/secure_view_step1_heading" android:contentDescription="@string/secure_view_step1_heading"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secure_view_step1_detail"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/secure_view_step1_detail" android:contentDescription="@string/secure_view_step1_detail"/>
 
-        <Button
-            android:id="@+id/secure_view_toast_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/secure_view_pop_toast"/>
+        <Button android:id="@+id/secure_view_toast_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:text="@string/secure_view_pop_toast" android:contentDescription="@string/secure_view_pop_toast"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:textStyle="bold"
-            android:text="@string/secure_view_step2_heading"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" android:textStyle="bold" android:text="@string/secure_view_step2_heading" android:contentDescription="@string/secure_view_step2_heading"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secure_view_step2_detail"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/secure_view_step2_detail" android:contentDescription="@string/secure_view_step2_detail"/>
 
-        <Button
-            android:id="@+id/secure_view_unsecure_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#833"
-            android:text="@string/secure_view_button"/>
+        <Button android:id="@+id/secure_view_unsecure_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:textColor="#833" android:text="@string/secure_view_button" android:contentDescription="@string/secure_view_button"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:textStyle="bold"
-            android:text="@string/secure_view_step3_heading"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" android:textStyle="bold" android:text="@string/secure_view_step3_heading" android:contentDescription="@string/secure_view_step3_heading"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secure_view_step3_detail"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/secure_view_step3_detail" android:contentDescription="@string/secure_view_step3_detail"/>
 
-        <Button
-            android:id="@+id/secure_view_builtin_secure_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:filterTouchesWhenObscured="true"
-            android:textColor="#833"
-            android:text="@string/secure_view_button"/>
+        <Button android:id="@+id/secure_view_builtin_secure_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:filterTouchesWhenObscured="true" android:textColor="#833" android:text="@string/secure_view_button" android:contentDescription="@string/secure_view_button"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:textStyle="bold"
-            android:text="@string/secure_view_step4_heading"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dip" android:textStyle="bold" android:text="@string/secure_view_step4_heading" android:contentDescription="@string/secure_view_step4_heading"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/secure_view_step4_detail"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/secure_view_step4_detail" android:contentDescription="@string/secure_view_step4_detail"/>
 
-        <Button
-            android:id="@+id/secure_view_custom_secure_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#833"
-            android:text="@string/secure_view_button"/>
+        <Button android:id="@+id/secure_view_custom_secure_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:textColor="#833" android:text="@string/secure_view_button" android:contentDescription="@string/secure_view_button"/>
     </LinearLayout>
 </ScrollView>

@@ -13,68 +13,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingLeft="4dip" android:paddingRight="4dip" android:paddingTop="4dip">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="4dip"
-    android:paddingRight="4dip"
-    android:paddingTop="4dip"
-    >
+    <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingBottom="12dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/incoming_message_view_message_text" android:contentDescription="@string/incoming_message_view_message_text"/>
 
-    <TextView
-        android:layout_gravity="center_vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingBottom="12dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/incoming_message_view_message_text"
-        />
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sample_thumb_2"/>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/sample_thumb_2"
-                    />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:paddingLeft="6dip"
-                    >
-                    <TextView
-                        android:id="@+id/from"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        />
-                    <TextView
-                        android:id="@+id/message"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        />
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:paddingLeft="6dip">
+                    <TextView android:id="@+id/from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall"/>
+                    <TextView android:id="@+id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium"/>
                 </LinearLayout>
 
         </LinearLayout>
 
-        <TextView
-            android:layout_gravity="center_vertical"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-            android:paddingTop="12dip"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/imcoming_message_view_message2_text"
-            />
+        <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="12dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/imcoming_message_view_message2_text" android:contentDescription="@string/imcoming_message_view_message2_text"/>
 
 </LinearLayout>
-

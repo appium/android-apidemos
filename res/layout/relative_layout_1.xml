@@ -13,42 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!--
     Demonstrates stretching a view to fill the space between two other views
 -->
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
 
     <!-- view1 goes on top -->
-    <TextView
-        android:id="@+id/view1"
-        android:background="@drawable/red"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="@string/relative_layout_1_top"/>
+    <TextView android:id="@+id/view1" android:background="@drawable/red" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:text="@string/relative_layout_1_top" android:contentDescription="@string/relative_layout_1_top"/>
 
     <!-- view2 goes on the bottom -->
-    <TextView
-        android:id="@+id/view2"
-        android:background="@drawable/green"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="@string/relative_layout_1_bottom"/>
+    <TextView android:id="@+id/view2" android:background="@drawable/green" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:text="@string/relative_layout_1_bottom" android:contentDescription="@string/relative_layout_1_bottom"/>
 
     <!-- view3 stretches betweeen view1 and view2 -->
-    <TextView
-        android:id="@+id/view3"
-        android:background="@drawable/yellow"
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_above="@id/view2"
-        android:layout_below="@id/view1"
-        android:text="@string/relative_layout_1_center"/>
+    <TextView android:id="@+id/view3" android:background="@drawable/yellow" android:layout_width="match_parent" android:layout_height="0dip" android:layout_above="@id/view2" android:layout_below="@id/view1" android:text="@string/relative_layout_1_center" android:contentDescription="@string/relative_layout_1_center"/>
 
 </RelativeLayout>
-

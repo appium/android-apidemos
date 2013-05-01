@@ -13,35 +13,19 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!-- Demonstrates redirection between activities.
      See corresponding Java code com.android.sdk.app.RedirectEnter.java. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="4dip"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/redirect_main" android:contentDescription="@string/redirect_main"/>
 
-    <TextView
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/redirect_main"/>
+    <TextView android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:paddingBottom="4dip" android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-    <TextView android:id="@+id/text"
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_weight="0" android:paddingBottom="4dip"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <Button android:id="@+id/clear"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:text="@string/clear_text">
-        <requestFocus />
+    <Button android:id="@+id/clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/clear_text" android:contentDescription="@string/clear_text">
+        <requestFocus/>
     </Button>
 
-    <Button android:id="@+id/newView"
-        android:layout_width="wrap_content" android:layout_height="wrap_content" 
-        android:text="@string/new_text">
+    <Button android:id="@+id/newView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/new_text" android:contentDescription="@string/new_text">
     </Button>
 
 </LinearLayout>
-

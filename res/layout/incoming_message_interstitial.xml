@@ -13,25 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:padding="8dp">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="8dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:paddingBottom="4dp" android:textAppearance="?android:attr/textAppearanceMedium" android:text="This would be where you would see a summary of the information related to the notification.  Instead, we'll just give you a button." android:contentDescription="This would be where you would see a summary of the information related to the notification.  Instead, we'll just give you a button."/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingBottom="4dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="This would be where you would see a summary of the information related to the notification.  Instead, we'll just give you a button." />
-
-    <Button
-        android:id="@+id/notify_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Switch To App" />
+    <Button android:id="@+id/notify_app" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Switch To App" android:contentDescription="Switch To App"/>
 
 </LinearLayout>

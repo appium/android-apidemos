@@ -13,26 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <!--
     Demonstrates a simple linear layout. The layout fills the screen, with the
     children stacked from the top.
     -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <ListView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0"/>
 
-    <ListView android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/linear_layout_9_button" />
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/linear_layout_9_button" android:contentDescription="@string/linear_layout_9_button"/>
 
 </LinearLayout>
-

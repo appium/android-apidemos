@@ -13,73 +13,31 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_12_a"
-            android:background="#FFFF0000"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_b"
-            android:background="#FF00FF00"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_c"
-            android:background="#FF0000FF"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_12_a" android:background="#FFFF0000" android:padding="3dip" android:contentDescription="@string/table_layout_12_a"/>
+        <TextView android:text="@string/table_layout_12_b" android:background="#FF00FF00" android:padding="3dip" android:contentDescription="@string/table_layout_12_b"/>
+        <TextView android:text="@string/table_layout_12_c" android:background="#FF0000FF" android:padding="3dip" android:contentDescription="@string/table_layout_12_c"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_12_d"
-            android:layout_span="2"
-            android:gravity="center_horizontal"
-            android:background="#FF0000FF"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_e"
-            android:background="#FF00FF00"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_12_d" android:layout_span="2" android:gravity="center_horizontal" android:background="#FF0000FF" android:padding="3dip" android:contentDescription="@string/table_layout_12_d"/>
+        <TextView android:text="@string/table_layout_12_e" android:background="#FF00FF00" android:padding="3dip" android:contentDescription="@string/table_layout_12_e"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_12_f"
-            android:background="#FFFF00FF"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_g"
-            android:background="#FF00FF00"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_h"
-            android:background="#FFFF0000"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_12_f" android:background="#FFFF00FF" android:padding="3dip" android:contentDescription="@string/table_layout_12_f"/>
+        <TextView android:text="@string/table_layout_12_g" android:background="#FF00FF00" android:padding="3dip" android:contentDescription="@string/table_layout_12_g"/>
+        <TextView android:text="@string/table_layout_12_h" android:background="#FFFF0000" android:padding="3dip" android:contentDescription="@string/table_layout_12_h"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_12_a"
-            android:background="#FF00FF00"
-            android:padding="3dip" />
-        <TextView
-            android:text="@string/table_layout_12_b"
-            android:layout_span="2"
-            android:gravity="center_horizontal"
-            android:background="#FF0000FF"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_12_a" android:background="#FF00FF00" android:padding="3dip" android:contentDescription="@string/table_layout_12_a"/>
+        <TextView android:text="@string/table_layout_12_b" android:layout_span="2" android:gravity="center_horizontal" android:background="#FF0000FF" android:padding="3dip" android:contentDescription="@string/table_layout_12_b"/>
     </TableRow>
 
     <TableRow>
-        <TextView
-            android:text="@string/table_layout_12_g"
-            android:layout_span="3"
-            android:gravity="center_horizontal"
-            android:background="#FFC0C0C0"
-            android:padding="3dip" />
+        <TextView android:text="@string/table_layout_12_g" android:layout_span="3" android:gravity="center_horizontal" android:background="#FFC0C0C0" android:padding="3dip" android:contentDescription="@string/table_layout_12_g"/>
     </TableRow>
 </TableLayout>
