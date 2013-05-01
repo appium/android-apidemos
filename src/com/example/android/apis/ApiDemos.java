@@ -16,17 +16,14 @@
 
 package com.example.android.apis;
 
-import com.example.android.apis.R;
-
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.SimpleAdapter;
 
 import java.text.Collator;
 import java.util.ArrayList;
@@ -49,9 +46,9 @@ public class ApiDemos extends ListActivity {
             path = "";
         }
 
-        setListAdapter(new SimpleAdapterWithDesc(this, getData(path),
-                android.R.layout.simple_list_item_1, new String[] { "title", "contentDescription" },
-                new int[] { android.R.id.text1, android.R.id.text2 }));
+        setListAdapter(new SimpleAdapter(this, getData(path),
+                android.R.layout.simple_list_item_1, new String[] { "title" },
+                new int[] { android.R.id.text1 }));
         getListView().setTextFilterEnabled(true);
     }
 
@@ -136,7 +133,6 @@ public class ApiDemos extends ListActivity {
 
     protected void addItem(List<Map<String, Object>> data, String name, Intent intent) {
         Map<String, Object> temp = new HashMap<String, Object>();
-        System.out.println("Name is " + name);
         temp.put("title", name);
         temp.put("intent", intent);
         data.add(temp);
