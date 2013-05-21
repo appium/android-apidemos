@@ -10,4 +10,8 @@ tests/build.xml
 tests/local.properties
 tests/proguard-project.txt
 tests/project.properties
-
+out
+.settings/
+*.apk
+lint.xml
+.idea/*
