@@ -137,6 +137,7 @@ public class ApiDemos extends ListActivity {
     protected void addItem(List<Map<String, Object>> data, String name, Intent intent) {
         Map<String, Object> temp = new HashMap<String, Object>();
         temp.put("title", name);
+        temp.put("contentDescription", name);
         temp.put("intent", intent);
         data.add(temp);
     }
