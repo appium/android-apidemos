@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis;
+package io.appium.android.apis;
 
 import android.test.ActivityInstrumentationTestCase2;
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.os;
+package io.appium.android.apis.os;
 
 import junit.framework.TestCase;
 import android.test.suitebuilder.annotation.SmallTest;
@@ -24,7 +24,7 @@ import android.test.suitebuilder.annotation.SmallTest;
  * Since this test doesn't need a {@link android.content.Context}, or any other
  * dependencies injected, it simply extends the standard {@link TestCase}.
  *
- * See {@link com.example.android.apis.AllTests} for documentation on running
+ * See {@link io.appium.android.apis.AllTests} for documentation on running
  * all tests and individual tests in this application.
  */
 public class MorseCodeConverterTest extends TestCase {

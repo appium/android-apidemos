@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <!-- Demonstrates different uses of the android.app.AlertDialog.
-     See corresponding Java code com.example.android.apis.app.AlertDialogSamples.java. -->
+     See corresponding Java code io.appium.android.apis.app.AlertDialogSamples.java. -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
         <Button android:id="@+id/two_buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/alert_dialog_two_buttons" android:contentDescription="@string/alert_dialog_two_buttons"/>

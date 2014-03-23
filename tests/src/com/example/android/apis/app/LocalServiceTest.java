@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.app;
+package io.appium.android.apis.app;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -33,8 +33,8 @@ import android.test.suitebuilder.annotation.SmallTest;
  * 
  * To run this test, you can type:
  * adb shell am instrument -w \
- *   -e class com.example.android.apis.app.LocalServiceTest \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   -e class io.appium.android.apis.app.LocalServiceTest \
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  */
 public class LocalServiceTest extends ServiceTestCase<LocalService> {
 

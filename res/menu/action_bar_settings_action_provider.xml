@@ -18,11 +18,11 @@
     <item android:id="@+id/menu_item_action_provider_action_bar"
         android:showAsAction="ifRoom"
         android:title="@string/action_bar_settings"
-        android:actionProviderClass="com.example.android.apis.app.ActionBarSettingsActionProviderActivity$SettingsActionProvider"/>
+        android:actionProviderClass="io.appium.android.apis.app.ActionBarSettingsActionProviderActivity$SettingsActionProvider"/>
 
     <item android:id="@+id/menu_item_action_provider_overflow"
         android:showAsAction="never"
         android:title="@string/action_bar_settings"
-        android:actionProviderClass="com.example.android.apis.app.ActionBarSettingsActionProviderActivity$SettingsActionProvider"/>
+        android:actionProviderClass="io.appium.android.apis.app.ActionBarSettingsActionProviderActivity$SettingsActionProvider"/>
 
 </menu>

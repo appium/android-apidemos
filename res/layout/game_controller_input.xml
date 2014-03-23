@@ -22,6 +22,6 @@
         <ListView android:id="@+id/summary" android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1" android:padding="3dip">
         </ListView>
 
-        <com.example.android.apis.view.GameView android:id="@+id/game" android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1" android:background="#000000" android:padding="3dip"/>
+        <io.appium.android.apis.view.GameView android:id="@+id/game" android:layout_width="0dip" android:layout_height="match_parent" android:layout_weight="1" android:background="#000000" android:padding="3dip"/>
     </LinearLayout>
 </LinearLayout>

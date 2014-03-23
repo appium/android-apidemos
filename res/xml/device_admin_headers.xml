@@ -19,23 +19,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <header
-        android:fragment="com.example.android.apis.app.DeviceAdminSample$GeneralFragment"
+        android:fragment="io.appium.android.apis.app.DeviceAdminSample$GeneralFragment"
         android:title="@string/header_general" />
 
     <header
-        android:fragment="com.example.android.apis.app.DeviceAdminSample$QualityFragment"
+        android:fragment="io.appium.android.apis.app.DeviceAdminSample$QualityFragment"
         android:title="@string/header_quality" />
 
     <header
-        android:fragment="com.example.android.apis.app.DeviceAdminSample$ExpirationFragment"
+        android:fragment="io.appium.android.apis.app.DeviceAdminSample$ExpirationFragment"
         android:title="@string/header_expiration" />
 
     <header
-        android:fragment="com.example.android.apis.app.DeviceAdminSample$LockWipeFragment"
+        android:fragment="io.appium.android.apis.app.DeviceAdminSample$LockWipeFragment"
         android:title="@string/header_lock_wipe" />
 
     <header
-        android:fragment="com.example.android.apis.app.DeviceAdminSample$EncryptionFragment"
+        android:fragment="io.appium.android.apis.app.DeviceAdminSample$EncryptionFragment"
         android:title="@string/header_encryption" />
 
 </preference-headers>

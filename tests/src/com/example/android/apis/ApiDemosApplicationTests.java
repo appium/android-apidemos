@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis;
+package io.appium.android.apis;
 
 import android.test.ApplicationTestCase;
 import android.test.suitebuilder.annotation.MediumTest;
@@ -27,8 +27,8 @@ import android.test.suitebuilder.annotation.SmallTest;
  * 
  * To run this test, you can type:
  * adb shell am instrument -w \
- *   -e class com.example.android.apis.ApiDemosApplicationTests \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   -e class io.appium.android.apis.ApiDemosApplicationTests \
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  */
 public class ApiDemosApplicationTests extends ApplicationTestCase<ApiDemosApplication> {
 

@@ -55,7 +55,7 @@
              preferences.  If running in a large screen, they can be embedded
              inside of the overall preferences UI. -->
         <PreferenceScreen
-                android:fragment="com.example.android.apis.preference.PreferenceWithHeaders$Prefs1FragmentInner"
+                android:fragment="io.appium.android.apis.preference.PreferenceWithHeaders$Prefs1FragmentInner"
                 android:title="@string/title_fragment_preference"
                 android:summary="@string/summary_fragment_preference">
             <!-- Arbitrary key/value pairs can be included for fragment arguments -->

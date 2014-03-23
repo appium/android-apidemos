@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <!-- Demonstrates how to use a custom title.
-     See corresponding Java code com.example.android.apis.app.CustomTitle.java. -->
+     See corresponding Java code io.appium.android.apis.app.CustomTitle.java. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
         <EditText android:id="@+id/left_text_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="10" android:minEms="10" android:layout_gravity="center_vertical" android:text="@string/custom_title_left" android:contentDescription="@string/custom_title_left"/>
