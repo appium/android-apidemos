@@ -17,24 +17,24 @@
 <!-- Demonstrates defining custom views in a layout file. -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res/com.example.android.apis"
+        xmlns:app="http://schemas.android.com/apk/res/io.appium.android.apis"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     
-    <com.example.android.apis.view.LabelView
+    <io.appium.android.apis.view.LabelView
             android:background="@drawable/red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 
             app:text="Red"/>
     
-    <com.example.android.apis.view.LabelView
+    <io.appium.android.apis.view.LabelView
             android:background="@drawable/blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 
             app:text="Blue" app:textSize="20dp"/>
     
-    <com.example.android.apis.view.LabelView
+    <io.appium.android.apis.view.LabelView
             android:background="@drawable/green"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" 

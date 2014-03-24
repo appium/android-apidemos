@@ -25,6 +25,6 @@
     android:voiceLanguageModel="free_form"
     android:voicePromptText="@string/search_invoke"
 
-    android:searchSuggestAuthority="com.example.android.apis.SuggestionProvider"
+    android:searchSuggestAuthority="io.appium.android.apis.SuggestionProvider"
     android:searchSuggestSelection=" ? "
 />

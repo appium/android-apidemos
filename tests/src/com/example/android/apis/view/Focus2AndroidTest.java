@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.view;
+package io.appium.android.apis.view;
 
-import com.example.android.apis.R;
+import io.appium.android.apis.R;
 
 import android.content.Context;
 import android.test.AndroidTestCase;
@@ -47,9 +47,9 @@ import android.widget.Button;
  * {@link AndroidTestCase}, and when run via an {@link android.test.InstrumentationTestRunner},
  * the context will be injected for you.
  * 
- * See {@link com.example.android.apis.app.ForwardingTest} for an example of an Activity unit test.
+ * See {@link io.appium.android.apis.app.ForwardingTest} for an example of an Activity unit test.
  *
- * See {@link com.example.android.apis.AllTests} for documentation on running
+ * See {@link io.appium.android.apis.AllTests} for documentation on running
  * all tests and individual tests in this application.
  */
 public class Focus2AndroidTest extends AndroidTestCase {

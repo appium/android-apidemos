@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.apis;
+package io.appium.android.apis;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -26,22 +26,22 @@ import android.test.suitebuilder.TestSuiteBuilder;
  *
  * To run all suites found in this apk:
  * $ adb shell am instrument -w \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  *
  * To run just this suite from the command line:
  * $ adb shell am instrument -w \
- *   -e class com.example.android.apis.AllTests \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   -e class io.appium.android.apis.AllTests \
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  *
- * To run an individual test case, e.g. {@link com.example.android.apis.os.MorseCodeConverterTest}:
+ * To run an individual test case, e.g. {@link io.appium.android.apis.os.MorseCodeConverterTest}:
  * $ adb shell am instrument -w \
- *   -e class com.example.android.apis.os.MorseCodeConverterTest \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   -e class io.appium.android.apis.os.MorseCodeConverterTest \
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  *
- * To run an individual test, e.g. {@link com.example.android.apis.os.MorseCodeConverterTest#testCharacterS()}:
+ * To run an individual test, e.g. {@link io.appium.android.apis.os.MorseCodeConverterTest#testCharacterS()}:
  * $ adb shell am instrument -w \
- *   -e class com.example.android.apis.os.MorseCodeConverterTest#testCharacterS \
- *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ *   -e class io.appium.android.apis.os.MorseCodeConverterTest#testCharacterS \
+ *   io.appium.android.apis.tests/android.test.InstrumentationTestRunner
  */
 public class AllTests extends TestSuite {
 

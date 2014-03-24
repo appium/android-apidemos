@@ -22,7 +22,7 @@
 
         <Button android:id="@+id/frag1hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hide" android:contentDescription="Hide"/>
 
-        <fragment android:name="com.example.android.apis.app.FragmentHideShow$FirstFragment" android:id="@+id/fragment1" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
+        <fragment android:name="io.appium.android.apis.app.FragmentHideShow$FirstFragment" android:id="@+id/fragment1" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -30,7 +30,7 @@
 
         <Button android:id="@+id/frag2hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hide" android:contentDescription="Hide"/>
 
-        <fragment android:name="com.example.android.apis.app.FragmentHideShow$SecondFragment" android:id="@+id/fragment2" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
+        <fragment android:name="io.appium.android.apis.app.FragmentHideShow$SecondFragment" android:id="@+id/fragment2" android:layout_weight="1" android:layout_width="0px" android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

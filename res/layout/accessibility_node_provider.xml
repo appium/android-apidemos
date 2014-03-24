@@ -30,7 +30,7 @@
     <view
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        class="com.example.android.apis.accessibility.AccessibilityNodeProviderActivity$VirtualSubtreeRootView" >
+        class="io.appium.android.apis.accessibility.AccessibilityNodeProviderActivity$VirtualSubtreeRootView" >
     </view>
 
 </LinearLayout>

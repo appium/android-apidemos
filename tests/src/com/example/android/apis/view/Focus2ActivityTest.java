@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.view;
+package io.appium.android.apis.view;
 
-import com.example.android.apis.R;
+import io.appium.android.apis.R;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.MediumTest;
@@ -37,9 +37,9 @@ import android.widget.Button;
  * the necessary {@link android.app.Instrumentation} will be injected for you to
  * user via {@link #getInstrumentation} in your tests.
  *
- * See {@link com.example.android.apis.app.ForwardingTest} for an example of an Activity unit test.
+ * See {@link io.appium.android.apis.app.ForwardingTest} for an example of an Activity unit test.
  *
- * See {@link com.example.android.apis.AllTests} for documentation on running
+ * See {@link io.appium.android.apis.AllTests} for documentation on running
  * all tests and individual tests in this application.
  */
 public class Focus2ActivityTest extends ActivityInstrumentationTestCase2<Focus2> {

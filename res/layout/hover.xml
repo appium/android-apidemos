@@ -22,11 +22,11 @@
 
     <CheckBox android:id="@+id/intercept_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hover_intercept_checkbox" android:contentDescription="@string/hover_intercept_checkbox"/>
 
-    <com.example.android.apis.view.HoverInterceptorView android:id="@+id/interceptor" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <io.appium.android.apis.view.HoverInterceptorView android:id="@+id/interceptor" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
         <TextView android:id="@+id/intercept_message" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hover_intercept_message_initial" android:padding="12dip" android:contentDescription="@string/hover_intercept_message_initial"/>
 
         <!-- This button uses a state-list drawable to select among
              different shapes based on its current hover state. -->
         <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/hover_background" android:text="@string/hover_button" android:contentDescription="@string/hover_button"/>
-    </com.example.android.apis.view.HoverInterceptorView>
+    </io.appium.android.apis.view.HoverInterceptorView>
 </LinearLayout>

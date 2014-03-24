@@ -15,7 +15,7 @@
 -->
 
 <!-- Demonstrates use of the com.google.android.maps.MapView.
-     See corresponding Java code com.example.android.apis.view.MapViewDemo.java. -->
+     See corresponding Java code io.appium.android.apis.view.MapViewDemo.java. -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"

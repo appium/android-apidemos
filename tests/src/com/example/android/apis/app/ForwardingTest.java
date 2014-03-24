@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.app;
+package io.appium.android.apis.app;
 
-import com.example.android.apis.R;
-import com.example.android.apis.view.Focus2ActivityTest;
+import io.appium.android.apis.R;
+import io.appium.android.apis.view.Focus2ActivityTest;
 
 import android.content.Context;
 import android.content.Intent;
@@ -42,7 +42,7 @@ import android.widget.Button;
  * in this configuration.  It's more useful here to concentrate on tests that involve the 
  * underlying data model, internal business logic, or exercising your Activity's life cycle.
  *
- * <p>See {@link com.example.android.apis.AllTests} for documentation on running
+ * <p>See {@link io.appium.android.apis.AllTests} for documentation on running
  * all tests and individual tests in this application.
  */
 public class ForwardingTest extends ActivityUnitTestCase<Forwarding> {
