@@ -5,7 +5,7 @@ A fork of Google's Android ApiDemos application, used for testing Appium
 
 #### Building
 
-> android update project --subprojects --target android-18 --path . --name ApiDemos
+> android update project --subprojects --target android-19 --path . --name ApiDemos
 >
 > ant clean debug
 >
