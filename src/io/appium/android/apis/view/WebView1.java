@@ -17,8 +17,10 @@
 package io.appium.android.apis.view;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import io.appium.android.apis.R;
 
@@ -27,19 +29,21 @@ import io.appium.android.apis.R;
  * Sample creating 1 webviews.
  */
 public class WebView1 extends Activity {
-
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-
+    public void onCreate(Bundle savedInstanceState) {;
         setContentView(R.layout.webview_1);
 
-        final String mimeType = "text/html";
+        WebView wv = (WebView) findViewById(R.id.wv1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
+        wv.getSettings().setBuiltInZoomControls(true);
+        wv.getSettings().setJavaScriptEnabled(false);
 
-        WebView wv;
+        wv.setWebViewClient(new WebViewClient());
 
-        wv = (WebView) findViewById(R.id.wv1);
-        wv.loadData("<a href='x'>Hello World! - 1</a>", mimeType, null);
-	wv.getSettings().setBuiltInZoomControls(true);
+        wv.loadUrl("file:///android_asset/html/index.html");
+
+        super.onCreate(savedInstanceState);
     }
 }
