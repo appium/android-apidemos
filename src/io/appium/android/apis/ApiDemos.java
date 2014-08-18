@@ -102,6 +102,17 @@ public class ApiDemos extends ListActivity {
                     if (entries.get(nextLabel) == null) {
                         addItem(myData, nextLabel, browseIntent(prefix.equals("") ? nextLabel : prefix + "/" + nextLabel));
                         entries.put(nextLabel, true);
+                        
+                        // Need an element with an apostrophe in its content-desc for a regression test.
+                        // Using "Accessibility" because it's first and I'm lazy. Unfortunately, this
+                    	// is code is rather hacky, but since the labels are generated from strings defined
+                    	// within Android Manifest, this is the quick n' dirty way of adding a new label while
+                    	// being certain nothing's broken.
+                        if(nextLabel.equals("Accessibility")) {
+                        	String testLabel = "Access'ibility";
+                            addItem(myData, testLabel, browseIntent(prefix.equals("") ? nextLabel : prefix + "/" + nextLabel));
+                            entries.put(testLabel, true);
+                        }
                     }
                 }
             }
