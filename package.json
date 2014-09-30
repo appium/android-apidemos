@@ -1,0 +1,27 @@
+{
+  "name": "android-apidemos",
+  "version": "1.0.1",
+  "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
+  "main": "bin/ApiDemos-debug.apk",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "android update project --subprojects --target android-19 --path . --name ApiDemos && ant clean debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appium/android-apidemos.git"
+  },
+  "keywords": [
+    "appium",
+    "android",
+    "apidemos"
+  ],
+  "author": "appium.io",
+  "bugs": {
+    "url": "https://github.com/appium/android-apidemos/issues"
+  },
+  "homepage": "https://github.com/appium/android-apidemos"
+}

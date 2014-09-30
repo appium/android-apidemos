@@ -9,7 +9,9 @@ A fork of Google's Android ApiDemos application, used for testing Appium
 >
 > ant clean debug
 >
-> adb install -r ./bin/ApiDemos-debug.apk 
+> adb install -r ./bin/ApiDemos-debug.apk
+
+Or `npm run-script prepublish`, which does the same thing.
 
 #### emma build for testing code coverage
 
