@@ -2073,6 +2073,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.TextFields"
+                  android:label="Views/TextFields">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".view.Buttons1"
                 android:label="Views/Buttons">
             <intent-filter>
