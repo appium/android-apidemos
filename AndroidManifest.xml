@@ -2821,6 +2821,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".text.KeyEventText" android:label="Text/KeyEventText">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".nfc.ForegroundDispatch" android:label="NFC/ForegroundDispatch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

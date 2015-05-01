@@ -1299,6 +1299,8 @@
     <string name="log_text_box_1_do_nothing_text">Do nothing</string>
     <string name="log_text_box_1_add_text">Add</string>
 
+    <string name="key_event_text_clear_text">Clear</string>
+
     <string name="notify_with_text_long_notify_text">Show Long Notification</string>
     <string name="notify_with_text_short_notify_text">Show Short Notification</string>
 
