@@ -1363,6 +1363,12 @@
                 <category android:name="appium.android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.WebView3" android:label="Views/WebView3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".view.RelativeLayout1" android:label="Views/Layouts/RelativeLayout/1. Vertical">
             <intent-filter>
