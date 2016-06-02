@@ -1,6 +1,6 @@
 {
   "name": "android-apidemos",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
   "main": "bin/ApiDemos-debug.apk",
   "directories": {
