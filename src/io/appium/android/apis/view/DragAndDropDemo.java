@@ -47,6 +47,7 @@ public class DragAndDropDemo extends Activity {
         mResultText = (TextView) findViewById(R.id.drag_result_text);
         mResultText.setOnDragListener(new View.OnDragListener() {
             public boolean onDrag(View v, DragEvent event) {
+                mResultText.setText("Dragging...");
                 final int action = event.getAction();
                 switch (action) {
                     case DragEvent.ACTION_DRAG_STARTED: {
@@ -65,7 +66,8 @@ public class DragAndDropDemo extends Activity {
                         mResultText.setText(dropped ? "Dropped!" : "No drop");
                     } break;
                 }
-                return false;
+                // watch all events, or on Android 7+ we don't get the ACTION_DRAG_ENDED event
+                return true;
             }
         });
     }
