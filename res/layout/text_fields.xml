@@ -25,13 +25,19 @@
 
       <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <EditText android:id="@+id/edit1" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions"/>
+        <EditText android:id="@+id/edit1" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
 
       </LinearLayout>
 
       <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
         <EditText android:id="@+id/edit2" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions"/>
+
+      </LinearLayout>
+
+      <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <EditText android:id="@+id/edit3" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions"/>
 
       </LinearLayout>
 
