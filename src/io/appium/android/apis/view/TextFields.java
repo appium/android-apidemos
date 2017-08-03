@@ -20,11 +20,14 @@ package io.appium.android.apis.view;
 // class is in a sub-package.
 import io.appium.android.apis.R;
 
+import java.lang.CharSequence;
+
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.TextView;
+import android.widget.EditText;
 
 
 /**
@@ -32,10 +35,26 @@ import android.widget.Spinner;
  * Spinner. This example uses the light theme.
  */
 public class TextFields extends Activity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text_fields);
+
+        EditText passwordInput = (EditText)findViewById(R.id.edit1);
+        final TextView passwordOutput = (TextView)findViewById(R.id.edit1Text);
+        passwordInput.addTextChangedListener(new TextWatcher () {
+            @Override
+            public void afterTextChanged (Editable s) {
+            }
+
+            @Override
+            public void beforeTextChanged (CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged (CharSequence s, int start, int before, int count) {
+                passwordOutput.setText(s);
+            }
+        });
     }
 }

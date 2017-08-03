@@ -1436,4 +1436,6 @@
     <string name="task_complete">is complete</string>
     <string name="task_not_complete">is not complete</string>
 
+    <string name="edit_text_password"></string>
+
   </resources>
