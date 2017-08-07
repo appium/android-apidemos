@@ -44,13 +44,13 @@ public class TextFields extends Activity {
         final TextView passwordOutput = (TextView)findViewById(R.id.edit1Text);
         passwordInput.addTextChangedListener(new TextWatcher () {
             @Override
-            public void afterTextChanged (Editable s) {
-            }
+            public void afterTextChanged (Editable s) {}
 
             @Override
-            public void beforeTextChanged (CharSequence s, int start, int count, int after) {
-            }
+            public void beforeTextChanged (CharSequence s, int start, int count, int after) {}
 
+            // We only care about the text as it is entered, so only watching
+            // for text change. The rest of the watcher functions can be ignored
             @Override
             public void onTextChanged (CharSequence s, int start, int before, int count) {
                 passwordOutput.setText(s);
