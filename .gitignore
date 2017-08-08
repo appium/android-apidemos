@@ -17,3 +17,4 @@ lint.xml
 .idea/*
 .DS_Store
 *.log
+.d
