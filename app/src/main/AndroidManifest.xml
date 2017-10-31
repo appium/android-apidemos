@@ -2344,6 +2344,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".view.CustomPicker1" android:label="Views/Picker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <!-- ************************************* -->
         <!--           GRAPHICS SAMPLES            -->
         <!-- ************************************* -->

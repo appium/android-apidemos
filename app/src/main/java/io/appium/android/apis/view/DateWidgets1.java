@@ -53,6 +53,7 @@ public class DateWidgets1 extends Activity {
 
     static final int TIME_DIALOG_ID = 0;
     static final int DATE_DIALOG_ID = 1;
+    static final int TIME_DIALOG_SPINNER_ID = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,12 +79,20 @@ public class DateWidgets1 extends Activity {
             }
         });
 
+        Button pickTimeSpinner = (Button) findViewById(R.id.pickTimeSpinner);
+        pickTimeSpinner.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                showDialog(TIME_DIALOG_SPINNER_ID);
+            }
+        });
+
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
-        mHour = c.get(Calendar.HOUR_OF_DAY);
-        mMinute = c.get(Calendar.MINUTE);
+        mHour = 1;
+        mMinute = 2;
 
         updateDisplay();
     }
@@ -93,6 +102,9 @@ public class DateWidgets1 extends Activity {
         switch (id) {
             case TIME_DIALOG_ID:
                 return new TimePickerDialog(this,
+                        mTimeSetListener, mHour, mMinute, false);
+            case TIME_DIALOG_SPINNER_ID:
+                return new TimePickerDialog(this, android.R.style.Theme_Holo_Dialog_NoActionBar,
                         mTimeSetListener, mHour, mMinute, false);
             case DATE_DIALOG_ID:
                 return new DatePickerDialog(this,
@@ -106,6 +118,9 @@ public class DateWidgets1 extends Activity {
     protected void onPrepareDialog(int id, Dialog dialog) {
         switch (id) {
             case TIME_DIALOG_ID:
+                ((TimePickerDialog) dialog).updateTime(mHour, mMinute);
+                break;
+            case TIME_DIALOG_SPINNER_ID:
                 ((TimePickerDialog) dialog).updateTime(mHour, mMinute);
                 break;
             case DATE_DIALOG_ID:
