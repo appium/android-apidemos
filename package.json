@@ -3,13 +3,15 @@
   "version": "2.1.2",
   "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
   "license": "Apache-2.0",
-  "main": "bin/ApiDemos-debug.apk",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "apks/ApiDemos-debug.apk",
+  "directories": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "android update project --subprojects --target android-19 --path . --name ApiDemos && ant clean debug"
+    "bump-gradle-version": "gulp gradle-version-update --package-version=${npm_package_version} && git add app/build.gradle",
+    "build": "./gradlew clean assembleDebug && npm run move-apk",
+    "move-apk": "mkdir -p apks && cp app/build/outputs/apk/debug/app-debug.apk ./apks/ApiDemos-debug.apk",
+    "prepare": "npm run build",
+    "version": "npm run bump-gradle-version && npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/appium/android-apidemos/issues"
   },
-  "homepage": "https://github.com/appium/android-apidemos"
+  "homepage": "https://github.com/appium/android-apidemos",
+  "devDependencies": {
+    "appium-gulp-plugins": "^2.4.0",
+    "replace-in-file": "^3.4.0",
+    "yargs": "^11.0.0"
+  }
 }
