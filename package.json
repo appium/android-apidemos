@@ -11,7 +11,8 @@
     "build": "./gradlew clean assembleDebug && npm run move-apk",
     "move-apk": "mkdir -p apks && cp app/build/outputs/apk/debug/app-debug.apk ./apks/ApiDemos-debug.apk",
     "prepare": "npm run build",
-    "version": "npm run bump-gradle-version && npm run build"
+    "version": "npm run bump-gradle-version && npm run build",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/appium/android-apidemos",
   "devDependencies": {
-    "appium-gulp-plugins": "^2.4.0",
+    "appium-gulp-plugins": "^3.6.0",
     "replace-in-file": "^3.4.0",
     "yargs": "^11.0.0"
   }
