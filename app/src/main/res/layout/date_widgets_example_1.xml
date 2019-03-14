@@ -23,4 +23,6 @@
 
     <Button android:id="@+id/pickTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_widgets_example_pickTime_text" android:contentDescription="@string/date_widgets_example_pickTime_text"/>
 
+    <Button android:id="@+id/pickTimeSpinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/date_widgets_example_pickTime_spinner_text" android:contentDescription="@string/date_widgets_example_pickTime_spinner_text"/>
+
 </LinearLayout>
