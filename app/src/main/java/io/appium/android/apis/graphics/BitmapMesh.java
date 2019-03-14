@@ -92,12 +92,10 @@ public class BitmapMesh extends GraphicsActivity {
                 float dx = cx - x;
                 float dy = cy - y;
                 float dd = dx*dx + dy*dy;
-                float d = FloatMath.sqrt(dd);
+                float d = (float) Math.sqrt(dd);
                 float pull = K / (dd + 0.000001f);
-
                 pull /= (d + 0.000001f);
-             //   android.util.Log.d("skia", "index " + i + " dist=" + d + " pull=" + pull);
-
+                //   android.util.Log.d("skia", "index " + i + " dist=" + d + " pull=" + pull);
                 if (pull >= 1) {
                     dst[i+0] = cx;
                     dst[i+1] = cy;
