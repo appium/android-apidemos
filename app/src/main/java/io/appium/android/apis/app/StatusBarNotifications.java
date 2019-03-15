@@ -197,13 +197,13 @@ public class StatusBarNotifications extends Activity {
         // choose the ticker text
         String tickerText = showTicker ? getString(textId) : null;
 
-        // Set the icon, scrolling text and timestamp
-        Notification notification = new Notification(moodId, tickerText,
-                System.currentTimeMillis());
-
-        // Set the info for the views that show in the notification panel.
-        notification.setLatestEventInfo(this, getText(R.string.status_bar_notifications_mood_title),
-                       text, makeMoodIntent(moodId));
+        Notification notification = new Notification.Builder(this)
+                .setBadgeIconType(moodId)
+                .setTicker(tickerText)
+                .setContentText(text)
+                .setContentTitle(getText(R.string.status_bar_notifications_mood_title))
+                .setContentIntent(makeMoodIntent(moodId))
+                .build();
 
         // Send the notification.
         // We use a layout id because it is a unique number.  We use it later to cancel.
@@ -248,17 +248,13 @@ public class StatusBarNotifications extends Activity {
         // In this sample, we'll use the same text for the ticker and the expanded notification
         CharSequence text = getText(R.string.status_bar_notifications_happy_message);
 
-        final Notification notification = new Notification(
-                R.drawable.stat_happy,       // the icon for the status bar
-                text,                        // the text to display in the ticker
-                System.currentTimeMillis()); // the timestamp for the notification
-
-        notification.setLatestEventInfo(
-                this,                        // the context to use
-                getText(R.string.status_bar_notifications_mood_title),
-                                             // the title for the notification
-                text,                        // the details to display in the notification
-                contentIntent);              // the contentIntent (see above)
+        Notification notification = new Notification.Builder(this)
+                .setBadgeIconType(R.drawable.stat_happy)
+                .setTicker(text)
+                .setContentText(text)
+                .setContentTitle(getText(R.string.status_bar_notifications_mood_title))
+                .setContentIntent(contentIntent)
+                .build();
 
         notification.defaults = defaults;
         

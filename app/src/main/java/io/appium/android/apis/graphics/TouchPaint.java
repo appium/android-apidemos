@@ -457,13 +457,13 @@ public class TouchPaint extends GraphicsActivity {
         private final RectF mReusableOvalRect = new RectF();
         private void drawOval(Canvas canvas, float x, float y, float major, float minor,
                 float orientation, Paint paint) {
-            canvas.save(Canvas.MATRIX_SAVE_FLAG);
             canvas.rotate((float) (orientation * 180 / Math.PI), x, y);
             mReusableOvalRect.left = x - minor / 2;
             mReusableOvalRect.right = x + minor / 2;
             mReusableOvalRect.top = y - major / 2;
             mReusableOvalRect.bottom = y + major / 2;
-            canvas.drawOval(mReusableOvalRect, paint);
+            //canvas.drawOval(mReusableOvalRect, paint);
+            canvas.saveLayer(mReusableOvalRect, paint, 0x01);
             canvas.restore();
         }
 

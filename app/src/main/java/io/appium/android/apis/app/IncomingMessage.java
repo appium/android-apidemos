@@ -121,12 +121,13 @@ public class IncomingMessage extends Activity {
         // The ticker text, this uses a formatted string so our message could be localized
         String tickerText = getString(R.string.imcoming_message_ticker_text, message);
 
-        // construct the Notification object.
-        Notification notif = new Notification(R.drawable.stat_sample, tickerText,
-                System.currentTimeMillis());
-
-        // Set the info for the views that show in the notification panel.
-        notif.setLatestEventInfo(this, from, message, contentIntent);
+        Notification notif = new Notification.Builder(this)
+                .setBadgeIconType(R.drawable.stat_sample)
+                .setTicker(tickerText)
+                .setContentText(message)
+                .setContentTitle(from)
+                .setContentIntent(contentIntent)
+                .build();
 
         // We'll have this notification do the default sound, vibration, and led.
         // Note that if you want any of these behaviors, you should always have
@@ -174,12 +175,13 @@ public class IncomingMessage extends Activity {
         // The ticker text, this uses a formatted string so our message could be localized
         String tickerText = getString(R.string.imcoming_message_ticker_text, message);
 
-        // construct the Notification object.
-        Notification notif = new Notification(R.drawable.stat_sample, tickerText,
-                System.currentTimeMillis());
-
-        // Set the info for the views that show in the notification panel.
-        notif.setLatestEventInfo(this, from, message, contentIntent);
+        Notification notif = new Notification.Builder(this)
+                .setBadgeIconType(R.drawable.stat_sample)
+                .setTicker(tickerText)
+                .setContentText(message)
+                .setContentTitle(from)
+                .setContentIntent(contentIntent)
+                .build();
 
         // We'll have this notification do the default sound, vibration, and led.
         // Note that if you want any of these behaviors, you should always have

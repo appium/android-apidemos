@@ -174,17 +174,17 @@ public class ServiceStartArguments extends Service {
      * Show a notification while this service is running.
      */
     private void showNotification(String text) {
-        // Set the icon, scrolling text and timestamp
-        Notification notification = new Notification(R.drawable.stat_sample, text,
-                System.currentTimeMillis());
-
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
                 new Intent(this, Controller.class), 0);
 
-        // Set the info for the views that show in the notification panel.
-        notification.setLatestEventInfo(this, getText(R.string.service_start_arguments_label),
-                       text, contentIntent);
+        Notification notification = new Notification.Builder(this)
+                .setBadgeIconType(R.drawable.stat_sample)
+                .setTicker(text)
+                .setContentText(text)
+                .setContentTitle(getText(R.string.service_start_arguments_label))
+                .setContentIntent(contentIntent)
+                .build();
 
         // We show this for as long as our service is processing a command.
         notification.flags |= Notification.FLAG_ONGOING_EVENT;

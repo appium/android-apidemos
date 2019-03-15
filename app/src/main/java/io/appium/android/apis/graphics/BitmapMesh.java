@@ -22,7 +22,7 @@ import android.content.Context;
 import android.graphics.*;
 import android.os.Bundle;
 import android.view.*;
-import android.util.FloatMath;
+import java.lang.Math;
 
 public class BitmapMesh extends GraphicsActivity {
 
@@ -92,7 +92,7 @@ public class BitmapMesh extends GraphicsActivity {
                 float dx = cx - x;
                 float dy = cy - y;
                 float dd = dx*dx + dy*dy;
-                float d = FloatMath.sqrt(dd);
+                float d = (float) Math.sqrt(dd);
                 float pull = K / (dd + 0.000001f);
 
                 pull /= (d + 0.000001f);

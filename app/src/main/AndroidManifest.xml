@@ -36,7 +36,7 @@
     <!-- For android.media.audiofx.Visualizer -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="19" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
 
     <!-- We will request access to the camera, saying we require a camera
          of some sort but not one with autofocus capability. -->
@@ -1173,13 +1173,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".os.Sensors" android:label="OS/Sensors">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".os.RotationVectorDemo" android:label="OS/Rotation Vector"  android:screenOrientation="nosensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -2288,13 +2281,6 @@
                 android:label="Views/Drag and Drop"
                 android:hardwareAccelerated="false"
                 android:enabled="@bool/atLeastHoneycomb">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".view.GameControllerInput" android:label="Views/Game Controller Input">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="appium.android.intent.category.SAMPLE_CODE" />
