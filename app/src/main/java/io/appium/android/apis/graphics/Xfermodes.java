@@ -116,15 +116,11 @@ public class Xfermodes extends GraphicsActivity {
 
         @Override protected void onDraw(Canvas canvas) {
             canvas.drawColor(Color.WHITE);
-
             Paint labelP = new Paint(Paint.ANTI_ALIAS_FLAG);
             labelP.setTextAlign(Paint.Align.CENTER);
-
             Paint paint = new Paint();
             paint.setFilterBitmap(false);
-
             canvas.translate(15, 35);
-
             int x = 0;
             int y = 0;
             for (int i = 0; i < sModes.length; i++) {
@@ -132,33 +128,23 @@ public class Xfermodes extends GraphicsActivity {
                 paint.setStyle(Paint.Style.STROKE);
                 paint.setShader(null);
                 canvas.drawRect(x - 0.5f, y - 0.5f,
-                                x + W + 0.5f, y + H + 0.5f, paint);
-
+                        x + W + 0.5f, y + H + 0.5f, paint);
                 // draw the checker-board pattern
                 paint.setStyle(Paint.Style.FILL);
                 paint.setShader(mBG);
                 canvas.drawRect(x, y, x + W, y + H, paint);
-
                 // draw the src/dst example into our offscreen bitmap
-                int sc = canvas.saveLayer(x, y, x + W, y + H, null,
-                                          Canvas.MATRIX_SAVE_FLAG |
-                                          Canvas.CLIP_SAVE_FLAG |
-                                          Canvas.HAS_ALPHA_LAYER_SAVE_FLAG |
-                                          Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
-                                          Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+                int sc = canvas.saveLayer(x, y, x + W, y + H, null);
                 canvas.translate(x, y);
                 canvas.drawBitmap(mDstB, 0, 0, paint);
                 paint.setXfermode(sModes[i]);
                 canvas.drawBitmap(mSrcB, 0, 0, paint);
                 paint.setXfermode(null);
                 canvas.restoreToCount(sc);
-
                 // draw the label
                 canvas.drawText(sLabels[i],
-                                x + W/2, y - labelP.getTextSize()/2, labelP);
-
+                        x + W/2, y - labelP.getTextSize()/2, labelP);
                 x += W + 10;
-
                 // wrap around when we've drawn enough for one row
                 if ((i % ROW_MAX) == ROW_MAX - 1) {
                     x = 0;

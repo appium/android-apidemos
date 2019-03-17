@@ -131,9 +131,9 @@ public class Sensors extends Activity {
                         float w  = w0 - 32;
                         float x = w0*0.5f;
                         for (int i=0 ; i<3 ; i++) {
-                            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                            canvas.save();
                             canvas.translate(x, w*0.5f + 4.0f);
-                            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                            canvas.save();
                             paint.setColor(outer);
                             canvas.scale(w, w);
                             canvas.drawOval(mRect, paint);
@@ -150,9 +150,9 @@ public class Sensors extends Activity {
                         float h  = h0 - 32;
                         float y = h0*0.5f;
                         for (int i=0 ; i<3 ; i++) {
-                            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                            canvas.save();
                             canvas.translate(mWidth - (h*0.5f + 4.0f), y);
-                            canvas.save(Canvas.MATRIX_SAVE_FLAG);
+                            canvas.save();
                             paint.setColor(outer);
                             canvas.scale(h, h);
                             canvas.drawOval(mRect, paint);

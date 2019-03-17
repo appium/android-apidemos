@@ -16,14 +16,18 @@
 
 package io.appium.android.apis.app;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -46,8 +50,18 @@ import io.appium.android.apis.R;
  */
 public class ForegroundService extends Service {
     static final String ACTION_FOREGROUND = "io.appium.android.apis.FOREGROUND";
+    static final String ACTION_FOREGROUND_WAKELOCK = "io.appium.android.apis.FOREGROUND_WAKELOCK";
     static final String ACTION_BACKGROUND = "io.appium.android.apis.BACKGROUND";
-    
+    static final String ACTION_BACKGROUND_WAKELOCK = "io.appium.android.apis.BACKGROUND_WAKELOCK";
+
+    private PowerManager.WakeLock mWakeLock;
+    private Handler mHandler = new Handler();
+    private Runnable mPulser = new Runnable() {
+        @Override public void run() {
+            Log.i("ForegroundService", "PULSE!");
+            mHandler.postDelayed(this, 5*1000);
+        }
+    };
 
     private static final Class<?>[] mSetForegroundSignature = new Class[] {
         boolean.class};
@@ -55,7 +69,7 @@ public class ForegroundService extends Service {
         int.class, Notification.class};
     private static final Class<?>[] mStopForegroundSignature = new Class[] {
         boolean.class};
-    
+
     private NotificationManager mNM;
     private Method mSetForeground;
     private Method mStartForeground;
@@ -63,7 +77,7 @@ public class ForegroundService extends Service {
     private Object[] mSetForegroundArgs = new Object[1];
     private Object[] mStartForegroundArgs = new Object[2];
     private Object[] mStopForegroundArgs = new Object[1];
-    
+
     void invokeMethod(Method method, Object[] args) {
         try {
             method.invoke(this, args);
@@ -75,7 +89,7 @@ public class ForegroundService extends Service {
             Log.w("ApiDemos", "Unable to invoke method", e);
         }
     }
-    
+
     /**
      * This is a wrapper around the new startForeground method, using the older
      * APIs if it is not available.
@@ -88,13 +102,13 @@ public class ForegroundService extends Service {
             invokeMethod(mStartForeground, mStartForegroundArgs);
             return;
         }
-        
+
         // Fall back on the old API.
         mSetForegroundArgs[0] = Boolean.TRUE;
         invokeMethod(mSetForeground, mSetForegroundArgs);
         mNM.notify(id, notification);
     }
-    
+
     /**
      * This is a wrapper around the new stopForeground method, using the older
      * APIs if it is not available.
@@ -106,14 +120,14 @@ public class ForegroundService extends Service {
             invokeMethod(mStopForeground, mStopForegroundArgs);
             return;
         }
-        
+
         // Fall back on the old API.  Note to cancel BEFORE changing the
         // foreground state, since we could be killed at that point.
         mNM.cancel(id);
         mSetForegroundArgs[0] = Boolean.FALSE;
         invokeMethod(mSetForeground, mSetForegroundArgs);
     }
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
@@ -144,57 +158,65 @@ public class ForegroundService extends Service {
 
 
 
-    // This is the old onStart method that will be called on the pre-2.0
-    // platform.  On 2.0 or later we override onStartCommand() so this
-    // method will not be called.
-    @Override
-    public void onStart(Intent intent, int startId) {
-        handleCommand(intent);
-    }
-
+    @SuppressLint("InvalidWakeLockTag")
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        handleCommand(intent);
+        if (ACTION_FOREGROUND.equals(intent.getAction())
+                || ACTION_FOREGROUND_WAKELOCK.equals(intent.getAction())) {
+            // In this sample, we'll use the same text for the ticker and the expanded notification
+            CharSequence text = getText(R.string.foreground_service_started);
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
+                    new Intent(this, Controller.class), 0);
+            // Set the info for the views that show in the notification panel.
+            Notification notification = new Notification.Builder(this)
+                    .setSmallIcon(R.drawable.stat_sample)  // the status icon
+                    .setTicker(text)  // the status text
+                    .setWhen(System.currentTimeMillis())  // the time stamp
+                    .setContentTitle(getText(R.string.alarm_service_label))  // the label
+                    .setContentText(text)  // the contents of the entry
+                    .setContentIntent(contentIntent)  // The intent to send when clicked
+                    .build();
+            startForegroundCompat(R.string.foreground_service_started, notification);
+        } else if (ACTION_BACKGROUND.equals(intent.getAction())
+                || ACTION_BACKGROUND_WAKELOCK.equals(intent.getAction())) {
+            stopForegroundCompat(R.string.foreground_service_started);
+        }
+        if (ACTION_FOREGROUND_WAKELOCK.equals(intent.getAction())
+                || ACTION_BACKGROUND_WAKELOCK.equals(intent.getAction())) {
+            if (mWakeLock == null) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    mWakeLock = getSystemService(PowerManager.class).newWakeLock(
+                            PowerManager.PARTIAL_WAKE_LOCK, "wake-service");
+                    mWakeLock.acquire();
+                }
+            } else {
+                releaseWakeLock();
+            }
+        }
+        mHandler.removeCallbacks(mPulser);
+        mPulser.run();
         // We want this service to continue running until it is explicitly
         // stopped, so return sticky.
         return START_STICKY;
     }
 
-
-    void handleCommand(Intent intent) {
-        if (ACTION_FOREGROUND.equals(intent.getAction())) {
-            // In this sample, we'll use the same text for the ticker and the expanded notification
-            CharSequence text = getText(R.string.foreground_service_started);
-
-            // Set the icon, scrolling text and timestamp
-            Notification notification = new Notification(R.drawable.stat_sample, text,
-                    System.currentTimeMillis());
-
-            // The PendingIntent to launch our activity if the user selects this notification
-            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                    new Intent(this, Controller.class), 0);
-
-            // Set the info for the views that show in the notification panel.
-            notification.setLatestEventInfo(this, getText(R.string.local_service_label),
-                           text, contentIntent);
-            
-            startForegroundCompat(R.string.foreground_service_started, notification);
-            
-        } else if (ACTION_BACKGROUND.equals(intent.getAction())) {
-            stopForegroundCompat(R.string.foreground_service_started);
+    void releaseWakeLock() {
+        if (mWakeLock != null) {
+            mWakeLock.release();
+            mWakeLock = null;
         }
     }
-    
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;
     }
-    
+
     // ----------------------------------------------------------------------
 
     /**
      * <p>Example of explicitly starting and stopping the {@link ForegroundService}.
-     * 
+     *
      * <p>Note that this is implemented as an inner class only keep the sample
      * all together; typically this code would appear in some separate class.
      */
