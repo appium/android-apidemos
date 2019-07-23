@@ -1,6 +1,8 @@
 android-apidemos
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/appium/android-apidemos.svg)](https://greenkeeper.io/)
+
 A fork of Google's Android ApiDemos application, used for testing Appium
 
 #### Building
