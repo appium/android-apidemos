@@ -31,6 +31,6 @@
   "devDependencies": {
     "appium-gulp-plugins": "^5.0.0",
     "replace-in-file": "^6.0.0",
-    "yargs": "^15.0.1"
+    "yargs": "^16.0.0"
   }
 }
