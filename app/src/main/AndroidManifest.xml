@@ -2576,14 +2576,6 @@
         </activity>
 
         <activity android:hardwareAccelerated="false"
-                  android:name=".graphics.Pictures" android:label="Graphics/Pictures">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-
-        <activity android:hardwareAccelerated="false"
                   android:name=".graphics.Vertices" android:label="Graphics/Vertices">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
