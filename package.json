@@ -1,6 +1,6 @@
 {
   "name": "android-apidemos",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
   "license": "Apache-2.0",
   "main": "apks/ApiDemos-debug.apk",
