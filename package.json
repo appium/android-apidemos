@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/appium/android-apidemos",
   "devDependencies": {
-    "appium-gulp-plugins": "^5.0.0"
+    "@appium/gulp-plugins": "^6.0.0"
   }
 }
