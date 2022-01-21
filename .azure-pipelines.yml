@@ -6,9 +6,7 @@ steps:
     inputs:
       versionSpec: 14.x
   - script: npm install
-    displayName: Install Node dependencies
-  - script: npm run build
-    displayName: Building the app
+    displayName: Install & Build
     env:
       JAVA_HOME: $(JAVA_HOME_11_X64)
       PATH: $(JAVA_HOME_11_X64)/bin:$(PATH)
