@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/appium/android-apidemos",
   "devDependencies": {
-    "@appium/gulp-plugins": "^6.0.0",
+    "@appium/gulp-plugins": "^7.0.0",
     "gulp": "^4.0.0"
   }
 }
