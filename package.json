@@ -3,12 +3,13 @@
   "version": "4.0.0",
   "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
   "license": "Apache-2.0",
-  "main": "apks/ApiDemos-debug.apk",
+  "main": "index.js",
   "directories": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bump-gradle-version": "gulp gradle-version-update --package-version=${npm_package_version} && git add app/build.gradle",
+    "bump-gradle-version": "node ./scripts/gradle-version-update.js --package-version=${npm_package_version} && git add app/build.gradle",
     "build": "./gradlew clean assembleDebug && npm run move-apk",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
     "move-apk": "mkdir -p apks && cp app/build/outputs/apk/debug/app-debug.apk ./apks/ApiDemos-debug.apk",
     "prepare": "npm run build",
     "version": "npm run bump-gradle-version && npm run build",
@@ -23,13 +24,25 @@
     "android",
     "apidemos"
   ],
-  "author": "appium.io",
+  "author": "Appium Contributors",
   "bugs": {
     "url": "https://github.com/appium/android-apidemos/issues"
   },
   "homepage": "https://github.com/appium/android-apidemos",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=8"
+  },
+  "files": [
+    "./index.js",
+    "./apks"
+  ],
   "devDependencies": {
-    "@appium/gulp-plugins": "^7.0.0",
-    "gulp": "^4.0.0"
+    "@appium/eslint-config-appium": "^6.0.0",
+    "eslint": "^7.32.0",
+    "fancy-log": "^2.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.2",
+    "semver": "^7.3.7"
   }
 }
