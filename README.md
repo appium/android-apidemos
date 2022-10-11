@@ -3,7 +3,7 @@ android-apidemos
 
 A fork of Google's Android ApiDemos application, used for testing Appium
 
-#### Building
+#### Building on cross-platform operating systems
 
 > npm run build
 
