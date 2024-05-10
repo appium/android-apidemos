@@ -1,23 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdk 33
 
     defaultConfig {
         applicationId "io.appium.android.apis"
         minSdkVersion 17
-        targetSdkVersion 31
+        targetSdkVersion 33
 
         versionCode 24
-        versionName '4.1.1'
+        versionName '4.2.0'
 
         testApplicationId "io.appium.android.apis.test"
         testInstrumentationRunner ".app.LocalSampleInstrumentation"
     }
 
     dependencies {
-        implementation 'androidx.appcompat:appcompat:1.4.2'
+        implementation 'androidx.appcompat:appcompat:1.6.1'
     }
 
     buildTypes {
