@@ -37,8 +37,7 @@
     "./apks"
   ],
   "devDependencies": {
-    "@appium/eslint-config-appium": "^6.0.0",
-    "eslint": "^7.32.0",
+    "@appium/eslint-config-appium-ts": "^1.0.0",
     "fancy-log": "^2.0.0",
     "@semantic-release/git": "^10.0.1",
     "semantic-release": "^21.0.0",
