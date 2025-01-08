@@ -22,7 +22,7 @@ async function runGradleBuild() {
 async function moveAPK() {
   try {
     await fs.promises.access(APKS_DIR, fs.constants.R_OK);
-  } catch (e) {
+  } catch {
     await fs.promises.mkdir(APKS_DIR, { recursive: true });
   }
   await fs.promises.rename(APK_ORIGIN_PATH, APK_DEST_PATH);
