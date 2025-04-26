@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 输入目标包名 -->
+    <EditText
+        android:id="@+id/package_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入目标包名"
+        android:layout_marginBottom="8dp"
+        android:inputType="text" />
+
+    <!-- 资源类型选择器 (Spinner) -->
+    <Spinner
+        android:id="@+id/resource_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 加载资源按钮 -->
+    <Button
+        android:id="@+id/load_resource_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载资源"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 资源列表 -->
+    <ListView
+        android:id="@+id/resource_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none" />
+</LinearLayout>

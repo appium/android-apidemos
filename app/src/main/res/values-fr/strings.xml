@@ -1438,4 +1438,9 @@
 
     <string name="edit_text_password"></string>
 
+    <!-- ============================== -->
+    <!--  WCustomDemo/Resources examples strings  -->
+    <!-- ============================== -->
+    <string name="w_custom_demo_resource_search" translatable="false">WCustomDemo/Resource Search/</string>
+    <string name="w_custom_demo_resource_browser" translatable="false">WCustomDemo/Resource Browser/</string>
   </resources>

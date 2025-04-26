@@ -3412,6 +3412,25 @@
             </intent-filter>
         </activity>
 
+        <!--  WCustomDemo/Resources examples strings begin  -->
+        <activity android:name=".wcustom.ResourceSearchActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_resource_search">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".wcustom.ResourceBrowserActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_resource_browser">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <!--  WCustomDemo/Resources examples strings end -->
     </application>
 
     <instrumentation android:name=".app.LocalSampleInstrumentation"

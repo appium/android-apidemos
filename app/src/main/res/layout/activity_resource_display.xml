@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 输入包名 -->
+    <EditText
+        android:id="@+id/package_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入包名"
+        android:layout_marginBottom="8dp"
+        android:inputType="text" />
+
+    <!-- 输入资源 ID -->
+    <EditText
+        android:id="@+id/resource_id_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入资源 ID (如 2131230845 或 0x7f020001)"
+        android:layout_marginBottom="12dp"
+        android:inputType="text" />
+
+    <!-- 加载资源按键 -->
+    <Button
+        android:id="@+id/load_resource_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载资源"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 显示资源名称、类型和 ID -->
+    <TextView
+        android:id="@+id/resource_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="资源名称: 未知"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 显示资源值（如字符串、颜色或数组内容） -->
+    <TextView
+        android:id="@+id/resource_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 显示图片资源或颜色效果 -->
+    <ImageView
+        android:id="@+id/resource_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone" />
+</LinearLayout>
