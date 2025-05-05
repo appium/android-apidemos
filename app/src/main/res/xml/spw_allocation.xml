@@ -1,0 +1,8 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeAllMask"
+    android:description="@string/spw_work_accessibility_service"
+    android:accessibilityFeedbackType="feedbackAllMask"
+    android:canRetrieveWindowContent="true"
+    android:notificationTimeout="100"
+    android:canPerformGestures="true"/>

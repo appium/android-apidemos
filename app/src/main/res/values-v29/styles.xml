@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <!-- 主色和次色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- 默认窗口背景 -->
+        <item name="android:windowBackground">@color/background</item>
+
+        <!-- 强制深色模式 -->
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+</resources>

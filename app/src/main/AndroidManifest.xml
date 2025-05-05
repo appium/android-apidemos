@@ -33,7 +33,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <!-- For android.media.audiofx.Visualizer -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -52,6 +52,7 @@
         android:icon="@drawable/app_sample_code"
         android:hardwareAccelerated="true"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         android:allowBackup="false">
 
@@ -3430,6 +3431,53 @@
                 <category android:name="appium.android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+        <activity android:name=".wcustom.ResourceLoaderActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_resource_loader">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wcustom.BlurActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_blur">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wcustom.BackdropBlurActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_backdrop_blur">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".wcustom.suspendedwindow.SuspendedwindowActivity"
+            android:exported="true"
+            android:label="@string/w_custom_demo_spw_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="appium.android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <service android:name=".wcustom.suspendedwindow.service.SuspendwindowService"
+            android:exported="false" />
+        <service
+            android:name=".wcustom.suspendedwindow.service.WorkAccessibilityService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/spw_allocation" />
+        </service>
         <!--  WCustomDemo/Resources examples strings end -->
     </application>
 

@@ -17,38 +17,35 @@
 <resources>
     <!-- A custom theme that is a variation on the light them with a different
          background color. -->
-    <!-- 基本 AppTheme，用于兼容旧版系统 -->
+    <!-- 基础 AppTheme，低于 Android 35 使用 -->
     <style name="AppTheme" parent="android:Theme.Material.Light">
         <!-- 主色和次色 -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- 默认窗口背景 -->
+        <!-- 窗口背景 -->
         <item name="android:windowBackground">@color/background</item>
+
+        <!-- 强制内容适应窗口，避免被系统栏（如状态栏）遮挡 -->
+        <item name="android:fitsSystemWindows">true</item>
+
+        <!-- 控制是否允许深色模式（根据需要启用） -->
+        <item name="android:forceDarkAllowed">true</item>
+
+        <!-- 使内容布局扩展到状态栏并通过 padding 做适应（可选） -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
     </style>
     <color name="custom_theme_color">#b0b0ff</color>
-    <style name="CustomTheme" parent="android:Theme.Light">
+    <style name="CustomTheme" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@color/custom_theme_color</item>
         <item name="android:colorBackground">@color/custom_theme_color</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
-    <!-- This is a theme that will adjust itself depending on the API version.
-         The default definition is the safe one, using a theme that has always
-         been defined.  Look at values-11/styles.xml for a variation that is
-         selected when the holographic theme is available. -->
-    <style name="ThemeHolo" parent="android:Theme">
-    </style>
-
-    <!-- This is a theme that will adjust itself depending on the API version.
-         The default definition is the safe one, using a theme that has always
-         been defined.  Look at values-11/styles.xml for a variation that is
-         selected when the holographic theme is available. -->
-    <style name="ThemeHoloDialog" parent="android:Theme.Dialog">
-    </style>
+c
 
     <!-- Base application theme is the default theme. -->
-    <style name="Theme" parent="android:Theme">
+    <style name="Theme" parent="android:Theme.DeviceDefault.DayNight">
     </style>
 
     <!-- Base application theme is the default theme. -->
@@ -114,21 +111,4 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="ImageView120dpi">
-        <item name="android:src">@drawable/stylogo120dpi</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="ImageView160dpi">
-        <item name="android:src">@drawable/stylogo160dpi</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="ImageView240dpi">
-        <item name="android:src">@drawable/stylogo240dpi</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
 </resources>

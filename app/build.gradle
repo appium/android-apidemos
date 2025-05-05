@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 33
+    compileSdk 35
 
     defaultConfig {
         applicationId "io.appium.android.apis"
-        minSdkVersion 17
-        targetSdkVersion 33
+        minSdkVersion 35
+        targetSdkVersion 35
 
         versionCode 24
         versionName '4.2.0'

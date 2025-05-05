@@ -23,10 +23,15 @@
 	<drawable name="screen_background_black">#ff000000</drawable>
     <drawable name="translucent_background">#e0000000</drawable>
     <drawable name="transparent_background">#00000000</drawable>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC6</color>
+    <color name="background">#FFFFFF</color>
 
     <color name="solid_red">#f00</color>
     <color name="solid_blue">#0000ff</color>
     <color name="solid_green">#f0f0</color>
     <color name="solid_yellow">#ffffff00</color>
+    <color name="sample_color">#ff8d8f00</color>
 
 </resources>

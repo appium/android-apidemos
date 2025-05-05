@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    tools:context=".SuspendedwindowActivity">
+    <Button
+        android:id="@+id/bt_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="应用内悬浮窗口(当前页面)" />
+
+    <Button
+        android:id="@+id/bt_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统悬浮窗口(全局显示)[锁屏无法显示]" />
+
+    <Button
+        android:id="@+id/bt_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统悬浮窗口(前台显示)" />
+
+    <Button
+        android:id="@+id/bt_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统悬浮窗口(全局显示)[无限制]" />
+
+    <Button
+        android:id="@+id/bt_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恢复初始状态" />
+
+
+</LinearLayout>

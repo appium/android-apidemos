@@ -1,0 +1,150 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ResourceLoaderActivity">
+
+    <!-- 资源加载部分 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择资源类型"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/resource_type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/load_resource_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载资源"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/resource_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp"
+        android:text="加载资源结果将在这里显示"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 动画控制部分 -->
+    <LinearLayout
+        android:id="@+id/animation_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/darker_gray">
+
+        <!-- 动画选项区 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动画效果"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkbox_up_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上下移动"
+                android:textColor="@android:color/white" />
+
+            <CheckBox
+                android:id="@+id/checkbox_left_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左右移动"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_scale_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="放大"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_scale_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="缩小"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- 插值器选择 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="插值器："
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <Spinner
+                android:id="@+id/interpolator_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/start_interpolator_animation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动动画"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 动态资源预览区 -->
+    <FrameLayout
+        android:id="@+id/resource_preview_area"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+    <!-- 动画展示 -->
+    <ImageView
+        android:id="@+id/animating_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:background="@android:color/holo_blue_light" />
+
+</LinearLayout>

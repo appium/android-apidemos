@@ -1,27 +1,13 @@
-/*
- * Copyright (C) 2011 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License
- */
-
 package io.appium.android.apis.nfc;
 
 import io.appium.android.apis.R;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -33,22 +19,26 @@ public class ForegroundNdefPush extends Activity {
     private TextView mText;
     private NdefMessage mMessage;
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onCreate(Bundle savedState) {
+    protected void onCreate(Bundle savedState) {
         super.onCreate(savedState);
 
+        // Initialize NFC adapter
         mAdapter = NfcAdapter.getDefaultAdapter(this);
 
-        // Create an NDEF message a URL
+        // Create an NDEF message with a URL
         mMessage = new NdefMessage(NdefRecord.createUri("http://www.android.com"));
 
+        // Set the content view and initialize the TextView
         setContentView(R.layout.foreground_dispatch);
-        mText = (TextView) findViewById(R.id.text);
+        mText = findViewById(R.id.text);
 
         if (mAdapter != null) {
-            mAdapter.setNdefPushMessage(mMessage, this);
-            mText.setText("Tap another Android phone with NFC to push a URL");
+            // Show a message for Android 10+ where Android Beam is deprecated
+            mText.setText("NFC Beam (Android Beam) is deprecated on this device.\nPlease use an alternative method.");
         } else {
+            // NFC is not supported on the device
             mText.setText("This phone is not NFC enabled.");
         }
     }

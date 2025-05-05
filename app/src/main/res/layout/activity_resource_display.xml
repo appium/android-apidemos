@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:hint="输入包名"
         android:layout_marginBottom="8dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingBottom="8dp" />
 
     <!-- 输入资源 ID -->
     <EditText
@@ -20,7 +21,8 @@
         android:layout_height="wrap_content"
         android:hint="输入资源 ID (如 2131230845 或 0x7f020001)"
         android:layout_marginBottom="12dp"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingBottom="8dp" />
 
     <!-- 加载资源按键 -->
     <Button

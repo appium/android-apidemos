@@ -1442,6 +1442,13 @@
     <!-- ============================== -->
     <!--  WCustomDemo/Resources examples strings  -->
     <!-- ============================== -->
-    <string name="w_custom_demo_resource_search" translatable="false">WCustomDemo/Resource Search/</string>
-    <string name="w_custom_demo_resource_browser" translatable="false">WCustomDemo/Resource Browser/</string>
-  </resources>
+    <string name="w_custom_demo_resource_search" translatable="false">WCustomDemo/Resource/Resource Search/</string>
+    <string name="w_custom_demo_resource_browser" translatable="false">WCustomDemo/Resource/Resource Browser/</string>
+    <string name="w_custom_demo_resource_loader" translatable="false">WCustomDemo/Resource/Resource Loader/</string>
+    <string name="w_custom_demo_blur" translatable="false">WCustomDemo/Blur/Blur/</string>
+    <string name="w_custom_demo_backdrop_blur" translatable="false">WCustomDemo/Blur/Back drop blur/</string>
+    <string name="w_custom_demo_spw_activity" translatable="false">WCustomDemo/Suspend Window/SuspendActivity/</string>
+    <string name="spw_work_accessibility_service" translatable="false">SPW Work Accessibility Service</string>
+    <string name="sample_string" translatable="false">loaded sample_string</string>
+
+</resources>
