@@ -8,8 +8,8 @@ android {
         minSdkVersion 17
         targetSdkVersion 33
 
-        versionCode 24
-        versionName '4.2.0'
+        versionCode 25
+        versionName '5.0.0'
 
         testApplicationId "io.appium.android.apis.test"
         testInstrumentationRunner ".app.LocalSampleInstrumentation"
