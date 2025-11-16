@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const semver = require('semver');
-const log = require('fancy-log');
 
 const VERSION_NAME_PATTERN = /^\s*versionName\s+['"](.+)['"]$/gm;
 const VERSION_CODE_PATTERN = /^\s*versionCode\s+(.+)$/gm;
@@ -49,7 +48,8 @@ async function gradleVersionUpdate() {
   }
   // match will be like `versionCode 42`
   const newCode = parseInt(versionCodeMatch[1], 10) + 1;
-  log.info(`Updating gradle build file '${gradleFile}' to version name '${version}' and version code '${newCode}'`);
+  // eslint-disable-next-line no-console
+  console.log(`Updating gradle build file '${gradleFile}' to version name '${version}' and version code '${newCode}'`);
   const newVersionCode = versionCodeMatch[0].replace(/\d+/, `${newCode}`);
   const newPayload = gradleFilePayload
     .replace(versionNameMatch[0], newVersionName)

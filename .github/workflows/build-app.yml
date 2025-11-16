@@ -1,0 +1,128 @@
+name: Build App (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      upload_release_artifacts:
+        description: 'Whether to upload build artifacts to a release'
+        required: false
+        type: boolean
+        default: false
+      upload_pr_artifacts:
+        description: 'Whether to upload build artifacts as GitHub Actions artifacts'
+        required: false
+        type: boolean
+        default: false
+      release_tag:
+        description: 'Release tag name for artifact upload'
+        required: false
+        type: string
+        default: ''
+      checkout_ref:
+        description: 'Git ref to checkout'
+        required: false
+        type: string
+        default: ''
+      run_lint:
+        description: 'Whether to run lint'
+        required: false
+        type: boolean
+        default: false
+      build_type:
+        description: 'Build type: debug or release'
+        required: false
+        type: string
+        default: 'debug'
+
+jobs:
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.checkout_ref || github.ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint
+        if: inputs.run_lint == true
+        run: npm run lint
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build Android APK (Debug)
+        if: inputs.build_type == 'debug'
+        run: ./gradlew clean assembleDebug
+
+      - name: Build Android APK (Release)
+        if: inputs.build_type == 'release'
+        run: ./gradlew clean assembleRelease
+
+      - name: Upload Android APK as Artifact (Debug)
+        if: inputs.upload_pr_artifacts == true && inputs.build_type == 'debug'
+        uses: actions/upload-artifact@v5
+        with:
+          name: ApiDemos-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7
+
+      - name: Upload Android APK as Artifact (Release)
+        if: inputs.upload_pr_artifacts == true && inputs.build_type == 'release'
+        uses: actions/upload-artifact@v5
+        with:
+          name: ApiDemos-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
+          retention-days: 7
+
+      - name: Prepare Debug APK for Release
+        if: inputs.upload_release_artifacts == true && inputs.build_type == 'debug'
+        run: cp app/build/outputs/apk/debug/app-debug.apk ApiDemos-debug.apk
+
+      - name: Upload Android APK to Release (Debug)
+        if: inputs.upload_release_artifacts == true && inputs.build_type == 'debug'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          files: ApiDemos-debug.apk
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare Release APK for Release
+        if: inputs.upload_release_artifacts == true && inputs.build_type == 'release'
+        run: cp app/build/outputs/apk/release/app-release.apk ApiDemos-release.apk
+
+      - name: Upload Android APK to Release (Release)
+        if: inputs.upload_release_artifacts == true && inputs.build_type == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          files: ApiDemos-release.apk
+          token: ${{ secrets.GITHUB_TOKEN }}
+

@@ -7,9 +7,7 @@ A fork of Google's Android ApiDemos application, used for testing Appium
 
 - Java 17
 - Node.js (npm)
-  
+
 #### Building
 
 > npm run build
-
-Then, `./apks/ApiDemos-debug.apk` will be generated.
