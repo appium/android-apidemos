@@ -94,14 +94,14 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: ApiDemos-release.apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
           retention-days: 7
 
       - name: Prepare APKs for Release
         if: inputs.upload_release_artifacts == true
         run: |
           cp app/build/outputs/apk/debug/app-debug.apk ApiDemos-debug.apk
-          cp app/build/outputs/apk/release/app-release.apk ApiDemos-release.apk
+          cp app/build/outputs/apk/release/app-release-unsigned.apk ApiDemos-release.apk
 
       - name: Upload Android APKs to Release
         if: inputs.upload_release_artifacts == true
