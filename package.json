@@ -34,7 +34,8 @@
   },
   "files": [
     "./index.js",
-    "./apks"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
