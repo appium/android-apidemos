@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <!-- Layout description of the DragAndDrop sample's main activity -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dot="http://schemas.android.com/apk/res/io.appium.android.apis" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dot="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
 
     <TextView android:id="@+id/drag_explanation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/drag_explanation" android:contentDescription="@string/drag_explanation"/>
 
