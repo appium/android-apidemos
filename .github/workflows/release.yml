@@ -31,10 +31,9 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Setup Git user
         run: |
@@ -64,5 +63,4 @@ jobs:
       release_tag: v${{ needs.version-and-release.outputs.new_release_version }}
       checkout_ref: master
       run_lint: false
-      build_type: debug
 

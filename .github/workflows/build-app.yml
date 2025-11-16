@@ -28,11 +28,6 @@ on:
         required: false
         type: boolean
         default: false
-      build_type:
-        description: 'Build type: debug or release'
-        required: false
-        type: string
-        default: 'debug'
 
 jobs:
   build-android:
@@ -77,16 +72,17 @@ jobs:
       - name: Make Gradlew executable
         run: chmod +x gradlew
 
+      - name: Clean Gradle build
+        run: npm run build:clean
+
       - name: Build Android APK (Debug)
-        if: inputs.build_type == 'debug'
         run: npm run build:debug
 
       - name: Build Android APK (Release)
-        if: inputs.build_type == 'release'
         run: npm run build:release
 
       - name: Upload Android APK as Artifact (Debug)
-        if: inputs.upload_pr_artifacts == true && inputs.build_type == 'debug'
+        if: inputs.upload_pr_artifacts == true
         uses: actions/upload-artifact@v5
         with:
           name: ApiDemos-debug.apk
@@ -94,34 +90,26 @@ jobs:
           retention-days: 7
 
       - name: Upload Android APK as Artifact (Release)
-        if: inputs.upload_pr_artifacts == true && inputs.build_type == 'release'
+        if: inputs.upload_pr_artifacts == true
         uses: actions/upload-artifact@v5
         with:
           name: ApiDemos-release.apk
           path: app/build/outputs/apk/release/app-release.apk
           retention-days: 7
 
-      - name: Prepare Debug APK for Release
-        if: inputs.upload_release_artifacts == true && inputs.build_type == 'debug'
-        run: cp app/build/outputs/apk/debug/app-debug.apk ApiDemos-debug.apk
+      - name: Prepare APKs for Release
+        if: inputs.upload_release_artifacts == true
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk ApiDemos-debug.apk
+          cp app/build/outputs/apk/release/app-release.apk ApiDemos-release.apk
 
-      - name: Upload Android APK to Release (Debug)
-        if: inputs.upload_release_artifacts == true && inputs.build_type == 'debug'
+      - name: Upload Android APKs to Release
+        if: inputs.upload_release_artifacts == true
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ inputs.release_tag }}
-          files: ApiDemos-debug.apk
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Prepare Release APK for Release
-        if: inputs.upload_release_artifacts == true && inputs.build_type == 'release'
-        run: cp app/build/outputs/apk/release/app-release.apk ApiDemos-release.apk
-
-      - name: Upload Android APK to Release (Release)
-        if: inputs.upload_release_artifacts == true && inputs.build_type == 'release'
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ inputs.release_tag }}
-          files: ApiDemos-release.apk
+          files: |
+            ApiDemos-debug.apk
+            ApiDemos-release.apk
           token: ${{ secrets.GITHUB_TOKEN }}
 

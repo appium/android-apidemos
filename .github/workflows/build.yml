@@ -15,4 +15,3 @@ jobs:
       upload_release_artifacts: false
       upload_pr_artifacts: true
       run_lint: true
-      build_type: debug
