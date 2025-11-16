@@ -1,0 +1,115 @@
+name: Build App (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      upload_release_artifacts:
+        description: 'Whether to upload build artifacts to a release'
+        required: false
+        type: boolean
+        default: false
+      upload_pr_artifacts:
+        description: 'Whether to upload build artifacts as GitHub Actions artifacts'
+        required: false
+        type: boolean
+        default: false
+      release_tag:
+        description: 'Release tag name for artifact upload'
+        required: false
+        type: string
+        default: ''
+      checkout_ref:
+        description: 'Git ref to checkout'
+        required: false
+        type: string
+        default: ''
+      run_lint:
+        description: 'Whether to run lint'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  build-android:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.checkout_ref || github.ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run lint
+        if: inputs.run_lint == true
+        run: npm run lint
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Make Gradlew executable
+        run: chmod +x gradlew
+
+      - name: Clean Gradle build
+        run: npm run build:clean
+
+      - name: Build Android APK (Debug)
+        run: npm run build:debug
+
+      - name: Build Android APK (Release)
+        run: npm run build:release
+
+      - name: Upload Android APK as Artifact (Debug)
+        if: inputs.upload_pr_artifacts == true
+        uses: actions/upload-artifact@v5
+        with:
+          name: ApiDemos-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 7
+
+      - name: Upload Android APK as Artifact (Release)
+        if: inputs.upload_pr_artifacts == true
+        uses: actions/upload-artifact@v5
+        with:
+          name: ApiDemos-release.apk
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
+          retention-days: 7
+
+      - name: Prepare APKs for Release
+        if: inputs.upload_release_artifacts == true
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk ApiDemos-debug.apk
+          cp app/build/outputs/apk/release/app-release-unsigned.apk ApiDemos-release.apk
+
+      - name: Upload Android APKs to Release
+        if: inputs.upload_release_artifacts == true
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.release_tag }}
+          files: |
+            ApiDemos-debug.apk
+            ApiDemos-release.apk
+          token: ${{ secrets.GITHUB_TOKEN }}
+

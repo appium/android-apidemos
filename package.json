@@ -7,11 +7,13 @@
   "directories": {},
   "scripts": {
     "bump-gradle-version": "node ./scripts/gradle-version-update.js --package-version=${npm_package_version} && git add app/build.gradle",
-    "build": "node ./scripts/build.js",
+    "build": "npm run build:debug",
+    "build:debug": "./gradlew assembleDebug",
+    "build:release": "./gradlew assembleRelease",
+    "build:clean": "./gradlew clean",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run build",
-    "version": "npm run bump-gradle-version && npm run build",
+    "version": "npm run bump-gradle-version",
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "repository": {
@@ -34,14 +36,15 @@
   },
   "files": [
     "./index.js",
-    "./apks"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "devDependencies": {
     "@appium/eslint-config-appium-ts": "^2.0.0-rc.1",
-    "fancy-log": "^2.0.0",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^21.0.0",
-    "semver": "^7.3.7",
-    "teen_process": "^2.0.2"
+    "conventional-changelog-conventionalcommits": "^7.0.0",
+    "semantic-release": "^25.0.0",
+    "semver": "^7.3.7"
   }
 }

@@ -49,7 +49,7 @@
 
       <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
 
-        <EditText android:id="@+id/edit3" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions"/>
+        <EditText android:id="@+id/edit4" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textNoSuggestions"/>
 
       </LinearLayout>
 

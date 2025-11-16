@@ -4,9 +4,9 @@
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-  
+
           http://www.apache.org/licenses/LICENSE-2.0
-  
+
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,27 +17,27 @@
 <!-- Demonstrates defining custom views in a layout file. -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res/io.appium.android.apis"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    
+
     <io.appium.android.apis.view.LabelView
             android:background="@drawable/red"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             app:text="Red"/>
-    
+
     <io.appium.android.apis.view.LabelView
             android:background="@drawable/blue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             app:text="Blue" app:textSize="20dp"/>
-    
+
     <io.appium.android.apis.view.LabelView
             android:background="@drawable/green"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
+            android:layout_height="wrap_content"
             app:text="Green" app:textColor="#ffffffff" />
 
 </LinearLayout>
