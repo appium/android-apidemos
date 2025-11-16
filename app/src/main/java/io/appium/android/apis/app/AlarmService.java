@@ -39,7 +39,7 @@ import android.widget.Toast;
  */
 public class AlarmService extends Activity {
     private PendingIntent mAlarmSender;
-    
+
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +47,8 @@ public class AlarmService extends Activity {
         // Create an IntentSender that will launch our service, to be scheduled
         // with the alarm manager.
         mAlarmSender = PendingIntent.getService(AlarmService.this,
-                0, new Intent(AlarmService.this, AlarmService_Service.class), 0);
-        
+                0, new Intent(AlarmService.this, AlarmService_Service.class), PendingIntent.FLAG_IMMUTABLE);
+
         setContentView(R.layout.alarm_service);
 
         // Watch for button clicks.

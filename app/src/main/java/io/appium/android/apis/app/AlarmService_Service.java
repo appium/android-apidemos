@@ -37,7 +37,7 @@ import android.widget.Toast;
  * This is an example of implementing an application service that will run in
  * response to an alarm, allowing us to move long duration work out of an
  * intent receiver.
- * 
+ *
  * @see AlarmService
  * @see AlarmService_Alarm
  */
@@ -102,7 +102,7 @@ public class AlarmService_Service extends Service {
         CharSequence text = getText(R.string.alarm_service_started);
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, AlarmService.class), 0);
+                new Intent(this, AlarmService.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the info for the views that show in the notification panel.
         Notification notification = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.stat_sample)  // the status icon

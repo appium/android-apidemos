@@ -137,7 +137,7 @@ public class IncomingMessage extends Activity {
         // is already an active matching pending intent, cancel it and replace
         // it with the new array of Intents.
         PendingIntent contentIntent = PendingIntent.getActivities(this, 0,
-                makeMessageIntentStack(this, from, message), PendingIntent.FLAG_CANCEL_CURRENT);
+                makeMessageIntentStack(this, from, message), PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         // The ticker text, this uses a formatted string so our message could be localized
         String tickerText = getString(R.string.imcoming_message_ticker_text, message);
         // Set the info for the views that show in the notification panel.
@@ -192,7 +192,7 @@ public class IncomingMessage extends Activity {
         intent.putExtra(IncomingMessageView.KEY_MESSAGE, message);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                intent, PendingIntent.FLAG_CANCEL_CURRENT);
+                intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         // The ticker text, this uses a formatted string so our message could be localized
         String tickerText = getString(R.string.imcoming_message_ticker_text, message);

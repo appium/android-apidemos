@@ -56,28 +56,28 @@ public class MessengerService extends Service {
     ArrayList<Messenger> mClients = new ArrayList<Messenger>();
     /** Holds last value set by a client. */
     int mValue = 0;
-    
+
     /**
      * Command to the service to register a client, receiving callbacks
      * from the service.  The Message's replyTo field must be a Messenger of
      * the client where callbacks should be sent.
      */
     static final int MSG_REGISTER_CLIENT = 1;
-    
+
     /**
      * Command to the service to unregister a client, ot stop receiving callbacks
      * from the service.  The Message's replyTo field must be a Messenger of
      * the client as previously given with MSG_REGISTER_CLIENT.
      */
     static final int MSG_UNREGISTER_CLIENT = 2;
-    
+
     /**
      * Command to service to set a new value.  This can be sent to the
      * service to supply a new value, and will be sent by the service to
      * any registered clients with the new value.
      */
     static final int MSG_SET_VALUE = 3;
-    
+
     /**
      * Handler of incoming messages from clients.
      */
@@ -110,12 +110,12 @@ public class MessengerService extends Service {
             }
         }
     }
-    
+
     /**
      * Target we publish for clients to send messages to IncomingHandler.
      */
     final Messenger mMessenger = new Messenger(new IncomingHandler());
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
@@ -132,7 +132,7 @@ public class MessengerService extends Service {
         // Tell the user we stopped.
         Toast.makeText(this, R.string.remote_service_stopped, Toast.LENGTH_SHORT).show();
     }
-    
+
     /**
      * When binding to the service, we return an interface to our messenger
      * for sending messages to the service.
@@ -150,7 +150,7 @@ public class MessengerService extends Service {
         CharSequence text = getText(R.string.remote_service_started);
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, Controller.class), 0);
+                new Intent(this, Controller.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the info for the views that show in the notification panel.
         Notification notification = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.stat_sample)  // the status icon

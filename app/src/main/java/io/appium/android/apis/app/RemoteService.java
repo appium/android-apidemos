@@ -48,7 +48,7 @@ import io.appium.android.apis.R;
  * process, we must use IPC to interact with it.  The
  * {@link Controller} and {@link Binding} classes
  * show how to interact with the service.
- * 
+ *
  * <p>Note that most applications <strong>do not</strong> need to deal with
  * the complexity shown here.  If your application simply has a service
  * running in its own process, the {@link LocalService} sample shows a much
@@ -62,17 +62,17 @@ public class RemoteService extends Service {
      */
     final RemoteCallbackList<IRemoteServiceCallback> mCallbacks
             = new RemoteCallbackList<IRemoteServiceCallback>();
-    
+
     int mValue = 0;
     NotificationManager mNM;
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
         // Display a notification about us starting.
         showNotification();
-        
+
         // While this service is running, it will continually increment a
         // number.  Send the first message that is used to perform the
         // increment.
@@ -86,15 +86,15 @@ public class RemoteService extends Service {
 
         // Tell the user we stopped.
         Toast.makeText(this, R.string.remote_service_stopped, Toast.LENGTH_SHORT).show();
-        
+
         // Unregister all callbacks.
         mCallbacks.kill();
-        
+
         // Remove the next pending message to increment the counter, stopping
         // the increment loop.
         mHandler.removeMessages(REPORT_MSG);
     }
-    
+
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -134,12 +134,12 @@ public class RemoteService extends Service {
         }
     };
 
-    
+
     @Override
     public void onTaskRemoved(Intent rootIntent) {
         Toast.makeText(this, "Task removed: " + rootIntent, Toast.LENGTH_LONG).show();
     }
-    
+
     private static final int REPORT_MSG = 1;
 
     /**
@@ -149,12 +149,12 @@ public class RemoteService extends Service {
     private final Handler mHandler = new Handler() {
         @Override public void handleMessage(Message msg) {
             switch (msg.what) {
-                
+
                 // It is time to bump the value!
                 case REPORT_MSG: {
                     // Up it goes.
                     int value = ++mValue;
-                    
+
                     // Broadcast to all clients the new value.
                     final int N = mCallbacks.beginBroadcast();
                     for (int i=0; i<N; i++) {
@@ -166,7 +166,7 @@ public class RemoteService extends Service {
                         }
                     }
                     mCallbacks.finishBroadcast();
-                    
+
                     // Repeat every 1 second.
                     sendMessageDelayed(obtainMessage(REPORT_MSG), 1*1000);
                 } break;
@@ -185,7 +185,7 @@ public class RemoteService extends Service {
         CharSequence text = getText(R.string.remote_service_started);
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, Controller.class), 0);
+                new Intent(this, Controller.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the info for the views that show in the notification panel.
         Notification notification = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.stat_sample)  // the status icon
@@ -201,13 +201,13 @@ public class RemoteService extends Service {
     }
 
     // ----------------------------------------------------------------------
-    
+
     /**
      * <p>Example of explicitly starting and stopping the remove service.
      * This demonstrates the implementation of a service that runs in a different
      * process than the rest of the application, which is explicitly started and stopped
      * as desired.</p>
-     * 
+     *
      * <p>Note that this is implemented as an inner class only keep the sample
      * all together; typically this code would appear in some separate class.
      */
@@ -247,14 +247,14 @@ public class RemoteService extends Service {
             }
         };
     }
-    
+
     // ----------------------------------------------------------------------
-    
+
     /**
      * Example of binding and unbinding to the remote service.
      * This demonstrates the implementation of a service which the client will
      * bind to, interacting with it through an aidl interface.</p>
-     * 
+     *
      * <p>Note that this is implemented as an inner class only keep the sample
      * all together; typically this code would appear in some separate class.
      */
@@ -264,7 +264,7 @@ public class RemoteService extends Service {
         IRemoteService mService = null;
         /** Another interface we use on the service. */
         ISecondary mSecondaryService = null;
-        
+
         Button mKillButton;
         TextView mCallbackText;
 
@@ -288,7 +288,7 @@ public class RemoteService extends Service {
             mKillButton = (Button)findViewById(R.id.kill);
             mKillButton.setOnClickListener(mKillListener);
             mKillButton.setEnabled(false);
-            
+
             mCallbackText = (TextView)findViewById(R.id.callback);
             mCallbackText.setText("Not attached.");
         }
@@ -318,7 +318,7 @@ public class RemoteService extends Service {
                     // disconnected (and then reconnected if it can be restarted)
                     // so there is no need to do anything here.
                 }
-                
+
                 // As part of the sample, tell the user what happened.
                 Toast.makeText(Binding.this, R.string.remote_service_connected,
                         Toast.LENGTH_SHORT).show();
@@ -383,7 +383,7 @@ public class RemoteService extends Service {
                             // has crashed.
                         }
                     }
-                    
+
                     // Detach our existing connection.
                     unbindService(mConnection);
                     unbindService(mSecondaryConnection);
@@ -423,11 +423,11 @@ public class RemoteService extends Service {
                 }
             }
         };
-        
+
         // ----------------------------------------------------------------------
         // Code showing how to deal with callbacks.
         // ----------------------------------------------------------------------
-        
+
         /**
          * This implementation is used to receive callbacks from the remote
          * service.
@@ -444,9 +444,9 @@ public class RemoteService extends Service {
                 mHandler.sendMessage(mHandler.obtainMessage(BUMP_MSG, value, 0));
             }
         };
-        
+
         private static final int BUMP_MSG = 1;
-        
+
         private Handler mHandler = new Handler() {
             @Override public void handleMessage(Message msg) {
                 switch (msg.what) {
@@ -457,7 +457,7 @@ public class RemoteService extends Service {
                         super.handleMessage(msg);
                 }
             }
-            
+
         };
     }
 

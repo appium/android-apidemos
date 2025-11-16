@@ -32,18 +32,18 @@ import android.os.Parcel;
 import android.os.RemoteException;
 
 /**
- * This is an example of service that will update its status bar balloon 
+ * This is an example of service that will update its status bar balloon
  * every 5 seconds for a minute.
- * 
+ *
  */
 public class NotifyingService extends Service {
-    
+
     // Use a layout id for a unique identifier
     private static int MOOD_NOTIFICATIONS = R.layout.status_bar_notifications;
 
-    // variable which controls the notification thread 
+    // variable which controls the notification thread
     private ConditionVariable mCondition;
- 
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
@@ -69,15 +69,15 @@ public class NotifyingService extends Service {
             for (int i = 0; i < 4; ++i) {
                 showNotification(R.drawable.stat_happy,
                         R.string.status_bar_notifications_happy_message);
-                if (mCondition.block(5 * 1000)) 
+                if (mCondition.block(5 * 1000))
                     break;
                 showNotification(R.drawable.stat_neutral,
                         R.string.status_bar_notifications_ok_message);
-                if (mCondition.block(5 * 1000)) 
+                if (mCondition.block(5 * 1000))
                     break;
                 showNotification(R.drawable.stat_sad,
                         R.string.status_bar_notifications_sad_message);
-                if (mCondition.block(5 * 1000)) 
+                if (mCondition.block(5 * 1000))
                     break;
             }
             // Done with our work...  stop the service!
@@ -95,7 +95,7 @@ public class NotifyingService extends Service {
         CharSequence text = getText(textId);
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, NotifyingController.class), 0);
+                new Intent(this, NotifyingController.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the icon and timestamp.
         // Note that in this example, we do not set the tickerText.  We update the icon enough that
         // it is distracting to show the ticker text every time it changes.  We strongly suggest

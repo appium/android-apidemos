@@ -40,13 +40,13 @@ import io.appium.android.apis.R;
 /**
  * This is an example of implementing an application service that runs locally
  * in the same process as the application.  The {@link Controller}
- * class shows how to interact with the service. 
+ * class shows how to interact with the service.
  *
  * <p>Notice the use of the {@link NotificationManager} when interesting things
  * happen in the service.  This is generally how background services should
  * interact with the user, rather than doing something more disruptive such as
  * calling startActivity().
- * 
+ *
  * <p>For applications targeting Android 1.5 or beyond, you may want consider
  * using the {@link android.app.IntentService} class, which takes care of all the
  * work of creating the extra thread and dispatching commands to it.
@@ -56,29 +56,29 @@ public class ServiceStartArguments extends Service {
     private Intent mInvokeIntent;
     private volatile Looper mServiceLooper;
     private volatile ServiceHandler mServiceHandler;
-    
+
     private final class ServiceHandler extends Handler {
         public ServiceHandler(Looper looper) {
             super(looper);
         }
-        
+
         @Override
         public void handleMessage(Message msg) {
             Bundle arguments = (Bundle)msg.obj;
-        
+
             String txt = arguments.getString("name");
-            
+
             Log.i("ServiceStartArguments", "Message: " + msg + ", "
                     + arguments.getString("name"));
-        
+
             if ((msg.arg2&Service.START_FLAG_REDELIVERY) == 0) {
                 txt = "New cmd #" + msg.arg1 + ": " + txt;
             } else {
                 txt = "Re-delivered #" + msg.arg1 + ": " + txt;
             }
-            
+
             showNotification(txt);
-        
+
             // Normally we would do some work here...  for our sample, we will
             // just sleep for 5 seconds.
             long endTime = System.currentTimeMillis() + 5*1000;
@@ -90,22 +90,22 @@ public class ServiceStartArguments extends Service {
                     }
                 }
             }
-        
+
             hideNotification();
-            
+
             Log.i("ServiceStartArguments", "Done with #" + msg.arg1);
             stopSelf(msg.arg1);
         }
 
     };
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
         Toast.makeText(this, R.string.service_created,
                 Toast.LENGTH_SHORT).show();
-        
+
         // This is who should be launched if the user selects our persistent
         // notification.
         mInvokeIntent = new Intent(this, Controller.class);
@@ -117,7 +117,7 @@ public class ServiceStartArguments extends Service {
         HandlerThread thread = new HandlerThread("ServiceStartArguments",
                 Process.THREAD_PRIORITY_BACKGROUND);
         thread.start();
-        
+
         mServiceLooper = thread.getLooper();
         mServiceHandler = new ServiceHandler(mServiceLooper);
     }
@@ -132,7 +132,7 @@ public class ServiceStartArguments extends Service {
         msg.obj = intent.getExtras();
         mServiceHandler.sendMessage(msg);
         Log.i("ServiceStartArguments", "Sending: " + msg);
-        
+
         // For the start fail button, we will simulate the process dying
         // for some reason in onStartCommand().
         if (intent.getBooleanExtra("fail", false)) {
@@ -145,7 +145,7 @@ public class ServiceStartArguments extends Service {
                 Process.killProcess(Process.myPid());
             }
         }
-        
+
         // Normally we would consistently return one kind of result...
         // however, here we will select between these two, so you can see
         // how they impact the behavior.  Try killing the process while it
@@ -176,7 +176,7 @@ public class ServiceStartArguments extends Service {
     private void showNotification(String text) {
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, Controller.class), 0);
+                new Intent(this, Controller.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the info for the views that show in the notification panel.
         Notification.Builder noteBuilder = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.stat_sample)  // the status icon
@@ -192,16 +192,16 @@ public class ServiceStartArguments extends Service {
         // We use a string id because it is a unique number.  We use it later to cancel.
         mNM.notify(R.string.service_created, noteBuilder.build());
     }
-    
+
     private void hideNotification() {
         mNM.cancel(R.string.service_created);
     }
-    
+
     // ----------------------------------------------------------------------
 
     /**
      * Example of explicitly starting the {@link ServiceStartArguments}.
-     * 
+     *
      * <p>Note that this is implemented as an inner class only keep the sample
      * all together; typically this code would appear in some separate class.
      */

@@ -117,7 +117,7 @@ public class SmsMessagingDemo extends Activity {
                 String recipient = recipientTextEdit.getText().toString();
                 for (String message : messages) {
                     sms.sendTextMessage(recipient, null, message, PendingIntent.getBroadcast(
-                            SmsMessagingDemo.this, 0, new Intent(ACTION_SMS_SENT), 0), null);
+                            SmsMessagingDemo.this, 0, new Intent(ACTION_SMS_SENT), PendingIntent.FLAG_IMMUTABLE), null);
                 }
             }
         });

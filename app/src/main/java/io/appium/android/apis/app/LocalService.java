@@ -59,7 +59,7 @@ public class LocalService extends Service {
             return LocalService.this;
         }
     }
-    
+
     @Override
     public void onCreate() {
         mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
@@ -102,7 +102,7 @@ public class LocalService extends Service {
         CharSequence text = getText(R.string.local_service_started);
         // The PendingIntent to launch our activity if the user selects this notification
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, LocalServiceActivities.Controller.class), 0);
+                new Intent(this, LocalServiceActivities.Controller.class), PendingIntent.FLAG_IMMUTABLE);
         // Set the info for the views that show in the notification panel.
         Notification notification = new Notification.Builder(this)
                 .setSmallIcon(R.drawable.stat_sample)  // the status icon

@@ -166,7 +166,7 @@ public class ForegroundService extends Service {
             // In this sample, we'll use the same text for the ticker and the expanded notification
             CharSequence text = getText(R.string.foreground_service_started);
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                    new Intent(this, Controller.class), 0);
+                    new Intent(this, Controller.class), PendingIntent.FLAG_IMMUTABLE);
             // Set the info for the views that show in the notification panel.
             Notification notification = new Notification.Builder(this)
                     .setSmallIcon(R.drawable.stat_sample)  // the status icon
