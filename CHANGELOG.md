@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.2 (2025-11-16)</small>
+
+* chore(deps): Bump com.android.tools.build:gradle from 8.0.2 to 8.13.1 (#114) ([efd0e88](https://github.com/appium/android-apidemos/commit/efd0e88)), closes [#114](https://github.com/appium/android-apidemos/issues/114)
+
 ## <small>6.0.1 (2025-11-16)</small>
 
 * chore(deps-dev): Bump conventional-changelog-conventionalcommits (#116) ([d51c2ee](https://github.com/appium/android-apidemos/commit/d51c2ee)), closes [#116](https://github.com/appium/android-apidemos/issues/116)
