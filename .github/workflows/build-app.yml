@@ -79,11 +79,11 @@ jobs:
 
       - name: Build Android APK (Debug)
         if: inputs.build_type == 'debug'
-        run: ./gradlew clean assembleDebug
+        run: npm run build:debug
 
       - name: Build Android APK (Release)
         if: inputs.build_type == 'release'
-        run: ./gradlew clean assembleRelease
+        run: npm run build:release
 
       - name: Upload Android APK as Artifact (Debug)
         if: inputs.upload_pr_artifacts == true && inputs.build_type == 'debug'

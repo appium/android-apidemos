@@ -7,11 +7,12 @@
   "directories": {},
   "scripts": {
     "bump-gradle-version": "node ./scripts/gradle-version-update.js --package-version=${npm_package_version} && git add app/build.gradle",
-    "build": "node ./scripts/build.js",
+    "build": "npm run build:debug",
+    "build:debug": "./gradlew clean assembleDebug",
+    "build:release": "./gradlew clean assembleRelease",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run build",
-    "version": "npm run bump-gradle-version && npm run build",
+    "version": "npm run bump-gradle-version",
     "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
   },
   "repository": {
@@ -47,7 +48,6 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "conventional-changelog-conventionalcommits": "^7.0.0",
     "semantic-release": "^25.0.0",
-    "semver": "^7.3.7",
-    "teen_process": "^3.0.0"
+    "semver": "^7.3.7"
   }
 }
