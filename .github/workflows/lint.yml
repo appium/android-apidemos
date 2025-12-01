@@ -15,8 +15,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 'lts/*'
-          check-latest: true
-          cache: 'npm'
 
       - uses: SocketDev/action@v1
         with:
