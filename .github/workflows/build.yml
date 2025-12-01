@@ -14,4 +14,3 @@ jobs:
     with:
       upload_release_artifacts: false
       upload_pr_artifacts: true
-      run_lint: true

@@ -23,11 +23,6 @@ on:
         required: false
         type: string
         default: ''
-      run_lint:
-        description: 'Whether to run lint'
-        required: false
-        type: boolean
-        default: false
 
 jobs:
   build-android:
@@ -54,10 +49,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Run lint
-        if: inputs.run_lint == true
-        run: npm run lint
 
       - name: Cache Gradle packages
         uses: actions/cache@v4
