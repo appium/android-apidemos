@@ -63,5 +63,4 @@ jobs:
       upload_pr_artifacts: false
       release_tag: v${{ needs.version-and-release.outputs.new_release_version }}
       checkout_ref: master
-      run_lint: false
 
