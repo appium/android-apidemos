@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.3 (2025-12-11)</small>
+
+* chore(deps): bump com.android.tools.build:gradle from 8.13.1 to 8.13.2 (#120) ([2faee41](https://github.com/appium/android-apidemos/commit/2faee41)), closes [#120](https://github.com/appium/android-apidemos/issues/120)
+* ci: Update workflows (#119) ([13f1efb](https://github.com/appium/android-apidemos/commit/13f1efb)), closes [#119](https://github.com/appium/android-apidemos/issues/119)
+* ci(deps): bump actions/checkout from 5 to 6 (#118) ([836c4ea](https://github.com/appium/android-apidemos/commit/836c4ea)), closes [#118](https://github.com/appium/android-apidemos/issues/118)
+* ci(deps): Bump cycjimmy/semantic-release-action from 5 to 6 (#117) ([3ca1db3](https://github.com/appium/android-apidemos/commit/3ca1db3)), closes [#117](https://github.com/appium/android-apidemos/issues/117)
+
 ## <small>6.0.2 (2025-11-16)</small>
 
 * chore(deps): Bump com.android.tools.build:gradle from 8.0.2 to 8.13.1 (#114) ([efd0e88](https://github.com/appium/android-apidemos/commit/efd0e88)), closes [#114](https://github.com/appium/android-apidemos/issues/114)
