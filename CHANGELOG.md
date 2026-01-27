@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.4 (2026-01-27)</small>
+
+* chore(deps): bump gradle-wrapper from 8.14.3 to 9.3.0 (#124) ([9e6649b](https://github.com/appium/android-apidemos/commit/9e6649b)), closes [#124](https://github.com/appium/android-apidemos/issues/124)
+* ci(deps): bump actions/cache from 4 to 5 (#121) ([c8db30b](https://github.com/appium/android-apidemos/commit/c8db30b)), closes [#121](https://github.com/appium/android-apidemos/issues/121)
+* ci(deps): bump actions/upload-artifact from 5 to 6 (#122) ([150fef7](https://github.com/appium/android-apidemos/commit/150fef7)), closes [#122](https://github.com/appium/android-apidemos/issues/122)
+
 ## <small>6.0.3 (2025-12-11)</small>
 
 * chore(deps): bump com.android.tools.build:gradle from 8.13.1 to 8.13.2 (#120) ([2faee41](https://github.com/appium/android-apidemos/commit/2faee41)), closes [#120](https://github.com/appium/android-apidemos/issues/120)
