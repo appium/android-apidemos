@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const semver = require('semver');
 
 const VERSION_NAME_PATTERN = /^\s*versionName\s+['"](.+)['"]$/gm;
