@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.5 (2026-01-28)</small>
+
+* chore(deps-dev): bump @appium/eslint-config-appium-ts from 2.0.5 to 3.0.0 (#125) ([175a80f](https://github.com/appium/android-apidemos/commit/175a80f)), closes [#125](https://github.com/appium/android-apidemos/issues/125)
+
 ## <small>6.0.4 (2026-01-27)</small>
 
 * chore(deps): bump gradle-wrapper from 8.14.3 to 9.3.0 (#124) ([9e6649b](https://github.com/appium/android-apidemos/commit/9e6649b)), closes [#124](https://github.com/appium/android-apidemos/issues/124)
