@@ -96,7 +96,7 @@ jobs:
 
       - name: Upload Android APKs to Release
         if: inputs.upload_release_artifacts == true
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ inputs.release_tag }}
           files: |
