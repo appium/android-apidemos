@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.8 (2026-04-30)</small>
+
+* chore(deps): bump gradle-wrapper from 9.4.1 to 9.5.0 (#135) ([f62c807](https://github.com/appium/android-apidemos/commit/f62c807)), closes [#135](https://github.com/appium/android-apidemos/issues/135)
+* ci(deps): bump softprops/action-gh-release from 2 to 3 (#132) ([c4c4e1a](https://github.com/appium/android-apidemos/commit/c4c4e1a)), closes [softprops/action-#release](https://github.com/softprops/action-/issues/release) [#132](https://github.com/appium/android-apidemos/issues/132)
+
 ## <small>6.0.7 (2026-03-20)</small>
 
 * chore(deps): bump gradle-wrapper from 9.3.1 to 9.4.1 (#131) ([fe9e9ee](https://github.com/appium/android-apidemos/commit/fe9e9ee)), closes [#131](https://github.com/appium/android-apidemos/issues/131)
