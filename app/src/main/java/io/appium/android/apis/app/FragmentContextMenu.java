@@ -64,13 +64,14 @@ public class FragmentContextMenu extends Activity {
 
         @Override
         public boolean onContextItemSelected(MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.a_item:
-                    Toast.makeText(getActivity(), "Item 1a was chosen", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.b_item:
-                    Toast.makeText(getActivity(), "Item 1b was chosen", Toast.LENGTH_SHORT).show();
-                    return true;
+            final int itemId = item.getItemId();
+            if (itemId == R.id.a_item) {
+                Toast.makeText(getActivity(), "Item 1a was chosen", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            if (itemId == R.id.b_item) {
+                Toast.makeText(getActivity(), "Item 1b was chosen", Toast.LENGTH_SHORT).show();
+                return true;
             }
             return super.onContextItemSelected(item);
         }

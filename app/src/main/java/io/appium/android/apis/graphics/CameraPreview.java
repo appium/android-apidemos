@@ -113,8 +113,7 @@ public class CameraPreview extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        switch (item.getItemId()) {
-        case R.id.switch_cam:
+        if (item.getItemId() == R.id.switch_cam) {
             // check for availability of multiple cameras
             if (numberOfCameras == 1) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -145,9 +144,8 @@ public class CameraPreview extends Activity {
             // Start the preview
             mCamera.startPreview();
             return true;
-        default:
-            return super.onOptionsItemSelected(item);
         }
+        return super.onOptionsItemSelected(item);
     }
 }
 

@@ -243,15 +243,16 @@ public class VideoPlayerActivity extends Activity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.show_tabs:
-                getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-                item.setChecked(true);
-                return true;
-            case R.id.hide_tabs:
-                getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-                item.setChecked(true);
-                return true;
+        final int itemId = item.getItemId();
+        if (itemId == R.id.show_tabs) {
+            getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+            item.setChecked(true);
+            return true;
+        }
+        if (itemId == R.id.hide_tabs) {
+            getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+            item.setChecked(true);
+            return true;
         }
         return false;
     }

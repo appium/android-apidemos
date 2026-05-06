@@ -219,22 +219,24 @@ public class ContentBrowserActivity extends Activity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.show_tabs:
-                getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-                item.setChecked(true);
-                return true;
-            case R.id.hide_tabs:
-                getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-                item.setChecked(true);
-                return true;
-            case R.id.stable_layout:
-                item.setChecked(!item.isChecked());
-                mContent.setBaseSystemUiVisibility(item.isChecked()
-                        ? View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        : View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-                return true;
+        final int itemId = item.getItemId();
+        if (itemId == R.id.show_tabs) {
+            getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+            item.setChecked(true);
+            return true;
+        }
+        if (itemId == R.id.hide_tabs) {
+            getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+            item.setChecked(true);
+            return true;
+        }
+        if (itemId == R.id.stable_layout) {
+            item.setChecked(!item.isChecked());
+            mContent.setBaseSystemUiVisibility(item.isChecked()
+                    ? View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    : View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            return true;
         }
         return false;
     }

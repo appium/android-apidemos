@@ -67,46 +67,40 @@ public class ActionBarDisplayOptions extends Activity
     public void onClick(View v) {
         final ActionBar bar = getActionBar();
         int flags = 0;
-        switch (v.getId()) {
-            case R.id.toggle_home_as_up:
-                flags = ActionBar.DISPLAY_HOME_AS_UP;
-                break;
-            case R.id.toggle_show_home:
-                flags = ActionBar.DISPLAY_SHOW_HOME;
-                break;
-            case R.id.toggle_use_logo:
-                flags = ActionBar.DISPLAY_USE_LOGO;
-                break;
-            case R.id.toggle_show_title:
-                flags = ActionBar.DISPLAY_SHOW_TITLE;
-                break;
-            case R.id.toggle_show_custom:
-                flags = ActionBar.DISPLAY_SHOW_CUSTOM;
-                break;
-
-            case R.id.toggle_navigation:
-                bar.setNavigationMode(
-                        bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_STANDARD
-                                ? ActionBar.NAVIGATION_MODE_TABS
-                                : ActionBar.NAVIGATION_MODE_STANDARD);
-                return;
-            case R.id.cycle_custom_gravity:
-                ActionBar.LayoutParams lp = (ActionBar.LayoutParams) mCustomView.getLayoutParams();
-                int newGravity = 0;
-                switch (lp.gravity & Gravity.RELATIVE_HORIZONTAL_GRAVITY_MASK) {
-                    case Gravity.START:
-                        newGravity = Gravity.CENTER_HORIZONTAL;
-                        break;
-                    case Gravity.CENTER_HORIZONTAL:
-                        newGravity = Gravity.END;
-                        break;
-                    case Gravity.END:
-                        newGravity = Gravity.START;
-                        break;
-                }
-                lp.gravity = lp.gravity & ~Gravity.RELATIVE_HORIZONTAL_GRAVITY_MASK | newGravity;
-                bar.setCustomView(mCustomView, lp);
-                return;
+        final int viewId = v.getId();
+        if (viewId == R.id.toggle_home_as_up) {
+            flags = ActionBar.DISPLAY_HOME_AS_UP;
+        } else if (viewId == R.id.toggle_show_home) {
+            flags = ActionBar.DISPLAY_SHOW_HOME;
+        } else if (viewId == R.id.toggle_use_logo) {
+            flags = ActionBar.DISPLAY_USE_LOGO;
+        } else if (viewId == R.id.toggle_show_title) {
+            flags = ActionBar.DISPLAY_SHOW_TITLE;
+        } else if (viewId == R.id.toggle_show_custom) {
+            flags = ActionBar.DISPLAY_SHOW_CUSTOM;
+        } else if (viewId == R.id.toggle_navigation) {
+            bar.setNavigationMode(
+                    bar.getNavigationMode() == ActionBar.NAVIGATION_MODE_STANDARD
+                            ? ActionBar.NAVIGATION_MODE_TABS
+                            : ActionBar.NAVIGATION_MODE_STANDARD);
+            return;
+        } else if (viewId == R.id.cycle_custom_gravity) {
+            ActionBar.LayoutParams lp = (ActionBar.LayoutParams) mCustomView.getLayoutParams();
+            int newGravity = 0;
+            switch (lp.gravity & Gravity.RELATIVE_HORIZONTAL_GRAVITY_MASK) {
+                case Gravity.START:
+                    newGravity = Gravity.CENTER_HORIZONTAL;
+                    break;
+                case Gravity.CENTER_HORIZONTAL:
+                    newGravity = Gravity.END;
+                    break;
+                case Gravity.END:
+                    newGravity = Gravity.START;
+                    break;
+            }
+            lp.gravity = lp.gravity & ~Gravity.RELATIVE_HORIZONTAL_GRAVITY_MASK | newGravity;
+            bar.setCustomView(mCustomView, lp);
+            return;
         }
 
         int change = bar.getDisplayOptions() ^ flags;
