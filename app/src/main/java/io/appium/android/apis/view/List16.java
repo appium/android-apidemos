@@ -63,16 +63,13 @@ public class List16 extends ListActivity {
         }
 
         public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-            switch (item.getItemId()) {
-            case R.id.share:
+            if (item.getItemId() == R.id.share) {
                 Toast.makeText(List16.this, "Shared " + getListView().getCheckedItemCount() +
                         " items", Toast.LENGTH_SHORT).show();
                 mode.finish();
-                break;
-            default:
+            } else {
                 Toast.makeText(List16.this, "Clicked " + item.getTitle(),
                         Toast.LENGTH_SHORT).show();
-                break;
             }
             return true;
         }

@@ -138,42 +138,38 @@ public class MenuInflateFromXml extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            // For "Title only": Examples of matching an ID with one assigned in
-            //                   the XML
-            case R.id.jump:
-                Toast.makeText(this, "Jump up in the air!", Toast.LENGTH_SHORT).show();
-                invalidateOptionsMenu();
-                return true;
-
-            case R.id.dive:
-                Toast.makeText(this, "Dive into the water!", Toast.LENGTH_SHORT).show();
-                return true;
-
-            // For "Groups": Toggle visibility of grouped menu items with
-            //               nongrouped menu items
-            case R.id.browser_visibility:
-                // The refresh item is part of the browser group
-                final boolean shouldShowBrowser = !mMenu.findItem(R.id.refresh).isVisible();
-                mMenu.setGroupVisible(R.id.browser, shouldShowBrowser);
-                break;
-                
-            case R.id.email_visibility:
-                // The reply item is part of the email group
-                final boolean shouldShowEmail = !mMenu.findItem(R.id.reply).isVisible();
-                mMenu.setGroupVisible(R.id.email, shouldShowEmail);
-                break;
-                
-            // Generic catch all for all the other menu resources
-            default:
-                // Don't toast text when a submenu is clicked
-                if (!item.hasSubMenu()) {
-                    Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                break;
+        final int itemId = item.getItemId();
+        // For "Title only": Examples of matching an ID with one assigned in the XML
+        if (itemId == R.id.jump) {
+            Toast.makeText(this, "Jump up in the air!", Toast.LENGTH_SHORT).show();
+            invalidateOptionsMenu();
+            return true;
         }
-        
+
+        if (itemId == R.id.dive) {
+            Toast.makeText(this, "Dive into the water!", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        // For "Groups": Toggle visibility of grouped menu items with nongrouped menu items
+        if (itemId == R.id.browser_visibility) {
+            final boolean shouldShowBrowser = !mMenu.findItem(R.id.refresh).isVisible();
+            mMenu.setGroupVisible(R.id.browser, shouldShowBrowser);
+            return false;
+        }
+
+        if (itemId == R.id.email_visibility) {
+            final boolean shouldShowEmail = !mMenu.findItem(R.id.reply).isVisible();
+            mMenu.setGroupVisible(R.id.email, shouldShowEmail);
+            return false;
+        }
+
+        // Generic catch all for all the other menu resources
+        if (!item.hasSubMenu()) {
+            Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
         return false;
     }
     
