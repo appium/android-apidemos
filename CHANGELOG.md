@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.12 (2026-06-29)</small>
+
+* chore(deps): bump gradle-wrapper from 9.6.0 to 9.6.1 (#142) ([2cd8a29](https://github.com/appium/android-apidemos/commit/2cd8a29)), closes [#142](https://github.com/appium/android-apidemos/issues/142)
+* ci(deps): bump actions/cache from 5 to 6 (#140) ([7928f40](https://github.com/appium/android-apidemos/commit/7928f40)), closes [#140](https://github.com/appium/android-apidemos/issues/140)
+* ci(deps): bump actions/checkout from 6 to 7 (#139) ([55306d4](https://github.com/appium/android-apidemos/commit/55306d4)), closes [#139](https://github.com/appium/android-apidemos/issues/139)
+
 ## <small>6.0.11 (2026-06-19)</small>
 
 * chore(deps): bump gradle-wrapper from 9.5.1 to 9.6.0 (#138) ([d51a19c](https://github.com/appium/android-apidemos/commit/d51a19c)), closes [#138](https://github.com/appium/android-apidemos/issues/138)
