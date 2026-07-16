@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.13 (2026-07-16)</small>
+
+* chore(deps): bump com.android.tools.build:gradle from 9.2.1 to 9.3.0 (#146) ([98bd29b](https://github.com/appium/android-apidemos/commit/98bd29b)), closes [#146](https://github.com/appium/android-apidemos/issues/146)
+* ci(deps): bump actions/setup-node from 6 to 7 (#145) ([6f275dd](https://github.com/appium/android-apidemos/commit/6f275dd)), closes [#145](https://github.com/appium/android-apidemos/issues/145)
+
 ## <small>6.0.12 (2026-06-29)</small>
 
 * chore(deps): bump gradle-wrapper from 9.6.0 to 9.6.1 (#142) ([2cd8a29](https://github.com/appium/android-apidemos/commit/2cd8a29)), closes [#142](https://github.com/appium/android-apidemos/issues/142)
