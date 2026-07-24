@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## <small>6.0.14 (2026-07-24)</small>
+
+* chore(deps): bump com.android.tools.build:gradle from 9.3.0 to 9.3.1 (#149) ([6d83451](https://github.com/appium/android-apidemos/commit/6d83451)), closes [#149](https://github.com/appium/android-apidemos/issues/149)
+
 ## <small>6.0.13 (2026-07-16)</small>
 
 * chore(deps): bump com.android.tools.build:gradle from 9.2.1 to 9.3.0 (#146) ([98bd29b](https://github.com/appium/android-apidemos/commit/98bd29b)), closes [#146](https://github.com/appium/android-apidemos/issues/146)
