@@ -23,5 +23,8 @@ jobs:
       - name: Install dependencies
         run: sfw npm install
 
-      - name: Run ESLint
+      - name: Run linter
         run: npm run lint
+
+      - name: Run format check
+        run: npm run format:check

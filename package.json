@@ -2,49 +2,48 @@
   "name": "android-apidemos",
   "version": "6.0.14",
   "description": "A fork of Google's Android ApiDemos application, used for testing Appium",
-  "license": "Apache-2.0",
-  "main": "index.js",
-  "directories": {},
-  "scripts": {
-    "bump-gradle-version": "node ./scripts/gradle-version-update.js --package-version=${npm_package_version} && git add app/build.gradle",
-    "build": "npm run build:debug",
-    "build:debug": "./gradlew assembleDebug",
-    "build:release": "./gradlew assembleRelease",
-    "build:clean": "./gradlew clean",
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
-    "version": "npm run bump-gradle-version",
-    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
+  "keywords": [
+    "android",
+    "apidemos",
+    "appium"
+  ],
+  "homepage": "https://github.com/appium/android-apidemos",
+  "bugs": {
+    "url": "https://github.com/appium/android-apidemos/issues"
   },
+  "license": "Apache-2.0",
+  "author": "Appium Contributors",
   "repository": {
     "type": "git",
     "url": "https://github.com/appium/android-apidemos.git"
   },
-  "keywords": [
-    "appium",
-    "android",
-    "apidemos"
-  ],
-  "author": "Appium Contributors",
-  "bugs": {
-    "url": "https://github.com/appium/android-apidemos/issues"
-  },
-  "homepage": "https://github.com/appium/android-apidemos",
-  "engines": {
-    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
-    "npm": ">=10"
-  },
+  "directories": {},
   "files": [
     "./index.js",
     "LICENSE",
     "CHANGELOG.md"
   ],
+  "main": "index.js",
+  "scripts": {
+    "bump-gradle-version": "node ./scripts/gradle-version-update.mjs --package-version=${npm_package_version} && git add app/build.gradle",
+    "build": "npm run build:debug",
+    "build:debug": "./gradlew assembleDebug",
+    "build:release": "./gradlew assembleRelease",
+    "build:clean": "./gradlew clean",
+    "lint": "oxlint -c oxlint.config.mjs .",
+    "lint:fix": "oxlint -c oxlint.config.mjs --fix .",
+    "format": "oxfmt -c oxfmt.config.mjs .",
+    "format:check": "oxfmt -c oxfmt.config.mjs --check .",
+    "version": "npm run bump-gradle-version",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install"
+  },
   "devDependencies": {
-    "@appium/eslint-config-appium-ts": "^3.0.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
-    "semantic-release": "^25.0.0",
+    "@appium/oxc-config": "^1.1.0",
+    "@appium/semantic-release-config": "^1.1.0",
     "semver": "^7.3.7"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0",
+    "npm": ">=10"
   }
 }
