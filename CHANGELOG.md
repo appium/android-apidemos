@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.15](https://github.com/appium/android-apidemos/compare/v6.0.14...v6.0.15) (2026-07-27)
+
+### Miscellaneous Chores
+
+* Integrate oxc and release configs ([#151](https://github.com/appium/android-apidemos/issues/151)) ([1e31a80](https://github.com/appium/android-apidemos/commit/1e31a803dff88763516a2b61d9316fd0f2ba060e))
+
 ## <small>6.0.14 (2026-07-24)</small>
 
 * chore(deps): bump com.android.tools.build:gradle from 9.3.0 to 9.3.1 (#149) ([6d83451](https://github.com/appium/android-apidemos/commit/6d83451)), closes [#149](https://github.com/appium/android-apidemos/issues/149)
