@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.17](https://github.com/appium/android-apidemos/compare/v6.0.16...v6.0.17) (2026-08-25)
+
+### Miscellaneous Chores
+
+* **deps:** bump gradle-wrapper from 9.7.0 to 9.7.1 ([#154](https://github.com/appium/android-apidemos/issues/154)) ([52d5697](https://github.com/appium/android-apidemos/commit/52d5697177e18309f4413cedc10b0b25357dd709))
+
 ## [6.0.16](https://github.com/appium/android-apidemos/compare/v6.0.15...v6.0.16) (2026-08-10)
 
 ### Miscellaneous Chores
